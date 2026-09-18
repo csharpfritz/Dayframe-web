@@ -28,6 +28,7 @@
 <meta name="twitter:image" content="https://getdayframe.app/img/og-image.png" />
 
 <link rel="stylesheet" href="css/style.css" />
+<script src="js/lightbox.js" defer></script>
 </head>
 <body>
 
@@ -60,9 +61,9 @@
         <!-- <a class="cta" href="#coming-soon">Get notified at launch</a> -->
       </div>
       <div class="hero-shot">
-        <div class="shot-frame">
+        <button type="button" class="shot-frame shot-trigger" aria-label="View larger image">
           <img src="img/app-screenshot.png" alt="DayFrame's live tile navigation rail with purple Calendar and Contacts tiles, a blue Email tile, and a green Bluesky tile, beside a Calendar day view" />
-        </div>
+        </button>
       </div>
     </div>
   </section>
@@ -201,18 +202,24 @@
 
         <div class="blurb blurb-trio">
           <div class="trio-shots">
-            <picture>
-              <source srcset="img/screens/module-email.webp" type="image/webp" />
-              <img src="img/screens/module-email.png" alt="DayFrame's Email module showing an inbox list with sample messages next to an empty reading pane" loading="lazy" />
-            </picture>
-            <picture>
-              <source srcset="img/screens/module-calendar.webp" type="image/webp" />
-              <img src="img/screens/module-calendar.png" alt="DayFrame's Calendar module showing a week view with sample events" loading="lazy" />
-            </picture>
-            <picture>
-              <source srcset="img/screens/module-contacts.webp" type="image/webp" />
-              <img src="img/screens/module-contacts.png" alt="DayFrame's Contacts module showing a sample contact list next to a contact detail card" loading="lazy" />
-            </picture>
+            <button type="button" class="shot-trigger" aria-label="View larger image">
+              <picture>
+                <source srcset="img/screens/module-email.webp" type="image/webp" />
+                <img src="img/screens/module-email.png" alt="DayFrame's Email module showing an inbox list with sample messages next to an empty reading pane" loading="lazy" />
+              </picture>
+            </button>
+            <button type="button" class="shot-trigger" aria-label="View larger image">
+              <picture>
+                <source srcset="img/screens/module-calendar.webp" type="image/webp" />
+                <img src="img/screens/module-calendar.png" alt="DayFrame's Calendar module showing a week view with sample events" loading="lazy" />
+              </picture>
+            </button>
+            <button type="button" class="shot-trigger" aria-label="View larger image">
+              <picture>
+                <source srcset="img/screens/module-contacts.webp" type="image/webp" />
+                <img src="img/screens/module-contacts.png" alt="DayFrame's Contacts module showing a sample contact list next to a contact detail card" loading="lazy" />
+              </picture>
+            </button>
           </div>
           <div class="blurb-text">
             <h3>Email, Calendar &amp; Contacts</h3>
@@ -224,10 +231,12 @@
         </div>
 
         <div class="blurb blurb-shot">
-          <picture>
-            <source srcset="img/screens/github-views.webp" type="image/webp" />
-            <img src="img/screens/github-views.png" alt="DayFrame's GitHub module showing an open-PR list with labels next to a detail pane for a pull request" loading="lazy" />
-          </picture>
+          <button type="button" class="shot-trigger" aria-label="View larger image">
+            <picture>
+              <source srcset="img/screens/github-views.webp" type="image/webp" />
+              <img src="img/screens/github-views.png" alt="DayFrame's GitHub module showing an open-PR list with labels next to a detail pane for a pull request" loading="lazy" />
+            </picture>
+          </button>
           <div class="blurb-text">
             <h3>GitHub</h3>
             <p>
@@ -240,10 +249,12 @@
         </div>
 
         <div class="blurb blurb-shot">
-          <picture>
-            <source srcset="img/screens/rss-feed-list.webp" type="image/webp" />
-            <img src="img/screens/rss-feed-list.png" alt="DayFrame's RSS module in a three-pane layout: feed list with channel icon, headline list, and an open article" loading="lazy" />
-          </picture>
+          <button type="button" class="shot-trigger" aria-label="View larger image">
+            <picture>
+              <source srcset="img/screens/rss-feed-list.webp" type="image/webp" />
+              <img src="img/screens/rss-feed-list.png" alt="DayFrame's RSS module in a three-pane layout: feed list with channel icon, headline list, and an open article" loading="lazy" />
+            </picture>
+          </button>
           <div class="blurb-text">
             <h3>RSS</h3>
             <p>
@@ -300,12 +311,12 @@
         </ul>
       </div>
       <div class="boards-shot">
-        <div class="shot-frame">
+        <button type="button" class="shot-frame shot-trigger" aria-label="View larger image">
           <picture>
             <source srcset="img/screens/boards-edit.webp" type="image/webp" />
             <img src="img/screens/boards-edit.png" alt="A DayFrame board in edit mode, with Undo, Redo, Check contrast, and Add widget controls above two renameable widgets" loading="lazy" />
           </picture>
-        </div>
+        </button>
       </div>
     </div>
   </section>
@@ -318,43 +329,12 @@
         goes well beyond swapping a color.
       </p>
 
-      <div class="preset-row">
-        <figure class="preset-item">
-          <picture>
-            <source srcset="img/screens/preset-midnight.webp" type="image/webp" />
-            <img src="img/screens/preset-midnight.png" alt="Midnight board style preset: a dark navy board with the style panel open" loading="lazy" />
-          </picture>
-          <figcaption>Midnight</figcaption>
-        </figure>
-        <figure class="preset-item">
-          <picture>
-            <source srcset="img/screens/preset-neon-tokyo.webp" type="image/webp" />
-            <img src="img/screens/preset-neon-tokyo.png" alt="Neon Tokyo board style preset: a deep purple board with magenta accents and a monospace font" loading="lazy" />
-          </picture>
-          <figcaption>Neon Tokyo</figcaption>
-        </figure>
-        <figure class="preset-item">
-          <picture>
-            <source srcset="img/screens/preset-paper.webp" type="image/webp" />
-            <img src="img/screens/preset-paper.png" alt="Paper board style preset: a cream board with a serif font" loading="lazy" />
-          </picture>
-          <figcaption>Paper</figcaption>
-        </figure>
-        <figure class="preset-item">
-          <picture>
-            <source srcset="img/screens/preset-atari.webp" type="image/webp" />
-            <img src="img/screens/preset-atari.png" alt="Atari 2600 board style preset: a wood-grain textured board with a retro font" loading="lazy" />
-          </picture>
-          <figcaption>Atari 2600</figcaption>
-        </figure>
-      </div>
       <p class="preset-more">
-        Plus Dragon, Fairy, Mermaid, and Hot&nbsp;Dog&nbsp;Stand — eight presets in all, and
-        counting.
+        Eight board style presets ship today, ready to apply in one click: Midnight, Paper,
+        Neon Tokyo, Atari 2600, Dragon, Fairy, Mermaid, and Hot&nbsp;Dog&nbsp;Stand.
       </p>
 
       <ul class="feature-list feature-list-grid">
-        <li>Board style presets, ready to apply in one click</li>
         <li>Your own wallpaper on a board</li>
         <li>Texture backgrounds for boards and widget headers</li>
         <li>Board-wide and per-widget typography</li>
@@ -393,6 +373,11 @@
   </section>
 
 </main>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Close image">&times;</button>
+  <img class="lightbox-img" src="" alt="" />
+</div>
 
 <footer class="site-footer">
   <div class="wrap">

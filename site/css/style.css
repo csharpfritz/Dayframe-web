@@ -151,6 +151,28 @@ h1, h2 {
   background: var(--tile-blue-light);
 }
 
+.shot-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: zoom-in;
+  transition: opacity 0.15s ease;
+}
+
+.shot-trigger:hover {
+  opacity: 0.9;
+}
+
+.shot-trigger:focus-visible {
+  outline: 2px solid var(--tile-blue-light);
+  outline-offset: 2px;
+}
+
 .shot-frame {
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -381,33 +403,6 @@ h1, h2 {
   margin: 0 0 24px;
 }
 
-.preset-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-bottom: 12px;
-}
-
-.preset-item {
-  margin: 0;
-}
-
-.preset-item picture,
-.preset-item img {
-  display: block;
-  width: 100%;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.preset-item figcaption {
-  color: var(--text-muted);
-  font-size: 0.88rem;
-  text-align: center;
-  margin-top: 8px;
-}
-
 .preset-more {
   color: var(--text-muted);
   font-size: 0.92rem;
@@ -601,10 +596,6 @@ h1, h2 {
     grid-template-columns: 1fr;
   }
 
-  .preset-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .feature-list-grid {
     grid-template-columns: 1fr;
   }
@@ -625,5 +616,64 @@ h1, h2 {
 
   .legal {
     padding: 40px 20px 64px;
+  }
+}
+
+/* Lightbox */
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(6, 7, 14, 0.9);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-elev);
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  color: var(--tile-blue-light);
+  border-color: var(--tile-blue-dark);
+}
+
+.lightbox-close:focus-visible {
+  outline: 2px solid var(--tile-blue-light);
+  outline-offset: 2px;
+}
+
+@media (max-width: 420px) {
+  .lightbox {
+    padding: 20px;
   }
 }
