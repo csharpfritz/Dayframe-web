@@ -16,15 +16,15 @@
 <meta property="og:site_name" content="DayFrame" />
 <meta property="og:url" content="https://getdayframe.app/" />
 <meta property="og:title" content="DayFrame — Your day, in one frame" />
-<meta property="og:description" content="A desktop app for Windows and Mac that brings your email, calendar, contacts, and more together behind one familiar shell with a live-tile navigation rail. Coming soon." />
+<meta property="og:description" content="A desktop app for Windows that brings your email, calendar, contacts, and more together behind one familiar shell with a live-tile navigation rail. Coming soon." />
 <meta property="og:image" content="https://getdayframe.app/img/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="DayFrame live-tile navigation rail with Email, Calendar, Contacts, Photos, and RSS tiles" />
+<meta property="og:image:alt" content="DayFrame brand graphic showing the live-tile navigation rail concept with Email, Calendar, and Contacts tiles beside the tagline 'Your day, in one frame.'" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="DayFrame — Your day, in one frame" />
-<meta name="twitter:description" content="A desktop app for Windows and Mac that brings your email, calendar, contacts, and more together behind one familiar shell with a live-tile navigation rail. Coming soon." />
+<meta name="twitter:description" content="A desktop app for Windows that brings your email, calendar, contacts, and more together behind one familiar shell with a live-tile navigation rail. Coming soon." />
 <meta name="twitter:image" content="https://getdayframe.app/img/og-image.png" />
 
 <link rel="stylesheet" href="css/style.css" />
@@ -37,7 +37,10 @@
       <span class="brand-mark" aria-hidden="true"></span>
       <span class="brand-name">DayFrame</span>
     </div>
-    <span class="pill">Coming soon</span>
+    <div class="header-links">
+      <a class="roadmap-link" href="https://feedback.getdayframe.app" target="_blank" rel="noopener">Roadmap</a>
+      <span class="pill">Coming soon</span>
+    </div>
   </div>
 </header>
 
@@ -48,16 +51,17 @@
       <div class="hero-copy">
         <h1>Your day at a glance. Your world in tiles.</h1>
         <p class="lede">
-          DayFrame is a desktop-first app for Windows and Mac that brings your email, calendar, contacts,
+          DayFrame is a desktop-first app for Windows that brings your email, calendar, contacts,
           and more together in one place — with a friendly layout and a
           Windows&nbsp;Phone-inspired live tile navigation rail for switching between modules.
+          Mac support is planned.
         </p>
 				<!-- CTA coming soon...  -->
         <!-- <a class="cta" href="#coming-soon">Get notified at launch</a> -->
       </div>
       <div class="hero-shot">
         <div class="shot-frame">
-          <img src="img/app-screenshot.png" alt="DayFrame prototype showing the live tile navigation rail with Calendar, Contacts, and Email tiles beside a calendar day view" />
+          <img src="img/app-screenshot.png" alt="DayFrame's live tile navigation rail with purple Calendar and Contacts tiles, a blue Email tile, and a green Bluesky tile, beside a Calendar day view" />
         </div>
       </div>
     </div>
@@ -69,12 +73,16 @@
       <p>
         Instead of juggling separate apps, DayFrame gives every part of your personal world a
         home behind a single shell. A persistent tile rail on the left keeps your modules one
-        tap away — bold, square, unmistakably blue — while the main pane shows whatever you're
+        tap away — bold, square, and yours to color — while the main pane shows whatever you're
         focused on right now.
+      </p>
+      <p>
+        Pinning goes deeper than modules, too. A single RSS feed, a board, a world clock — pin
+        any of them straight to the rail and it becomes its own live tile.
       </p>
 			<p>
 				We want you to feel at home in DayFrame, so even if you don't like the colors or fonts in
-				the application, they're all customizable.  Tiles can be any color or size that you'd like.				
+				the application, they're all customizable.  Tiles can be any color or size that you'd like.
 			</p>
       <p>
         Under the hood, each module is an independently built, independently tested piece that
@@ -87,7 +95,9 @@
   <section class="modules">
     <div class="wrap">
       <h2>Built to grow, module by module</h2>
-      <p class="modules-lede">Live and planned modules for the tile rail:</p>
+      <p class="modules-lede">Ten modules are live today, with more on the way.</p>
+
+      <h3 class="modules-group-h">Available now</h3>
       <div class="tile-grid">
 
         <div class="tile tile-live">
@@ -96,19 +106,54 @@
         </div>
 
         <div class="tile tile-live">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zM5 9h14v11H5V9zm2 3h4v4H7v-4z"/></svg>
+          <span>Calendar</span>
+        </div>
+
+        <div class="tile tile-live">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.7 0 8 1.34 8 4v2H4v-2c0-2.66 5.3-4 8-4zm0-2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>
           <span>Contacts</span>
         </div>
 
         <div class="tile tile-live">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zM5 9h14v11H5V9zm2 3h4v4H7v-4z"/></svg>
-          <span>Calendar</span>
-        </div>
-
-        <div class="tile">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.4 9.4 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
           <span>GitHub</span>
         </div>
+
+        <div class="tile tile-live">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-2.2 2.6-5.6 2.9-8 1.3 1 2.7 3 4.6 5.7 5-1.1 1-2.9 1.7-5.2 1.7 2.8 2 6.5 2.1 8.8-.3 2.3 2.4 6 2.3 8.8.3-2.3 0-4.1-.7-5.2-1.7 2.7-.4 4.7-2.3 5.7-5-2.4 1.6-5.8 1.3-8-1.3-.4-.4-1.2-.4-1.6 0z"/></svg>
+          <span>Bluesky</span>
+        </div>
+
+        <div class="tile tile-live">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0-7c7.18 0 13 5.82 13 13h-3c0-5.52-4.48-10-10-10v-3zm0-7c11.05 0 20 8.95 20 20h-3c0-9.39-7.61-17-17-17V3z"/></svg>
+          <span>RSS</span>
+        </div>
+
+        <div class="tile tile-live">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z"/></svg>
+          <span>Boards</span>
+        </div>
+
+        <div class="tile tile-live">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 19a4.5 4.5 0 0 1-.5-8.98 6 6 0 0 1 11.44-2.36A4.5 4.5 0 0 1 17.5 19h-11zM12 3a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1z"/></svg>
+          <span>Weather</span>
+        </div>
+
+        <div class="tile tile-live">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16v1.5H4V19zm1-3.6 4.5-4.9 3 3 5.7-6.3 1.3 1.2-7 7.7-3-3L6.1 16.6 5 15.4z"/></svg>
+          <span>Market&nbsp;News</span>
+        </div>
+
+        <div class="tile tile-live">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.75 5v5.4l4.2 2.5-.75 1.25-5-3V7h1.55z"/></svg>
+          <span>Time</span>
+        </div>
+
+      </div>
+
+      <h3 class="modules-group-h modules-group-h-planned">Planned</h3>
+      <div class="tile-grid">
 
         <div class="tile tile-muted">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2v10h14V9.83l-4.29 4.3a1 1 0 0 1-1.32.08l-2.9-2.32-3.79 3.8L5 14.4V7zm3 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
@@ -116,8 +161,28 @@
         </div>
 
         <div class="tile tile-muted">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.08a2.9 2.9 0 0 0-1.96.77L8.91 12.7a3 3 0 0 0 0-1.4l7.05-4.11a3 3 0 1 0-.9-1.72l-7.05 4.11a3 3 0 1 0 0 4.84l7.13 4.16a2.92 2.92 0 1 0 2.86-2.5z"/></svg>
-          <span>Social&nbsp;Media</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2 4v1.5h10V7H7zm0 4v1.5h10V11H7zm0 4v1.5h6V15H7z"/></svg>
+          <span>Notes</span>
+        </div>
+
+        <div class="tile tile-muted">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l1 2h4v2H4V5h4l1-2zm-3 6h12l-1 12H7L6 9zm3 2v8h1.5v-8H9zm4.5 0v8H15v-8h-1.5z"/></svg>
+          <span>Tasks</span>
+        </div>
+
+        <div class="tile tile-muted">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11l4 4v6a1 1 0 0 1-1 1h-1.2a2.5 2.5 0 0 1-4.6 0H9.8a2.5 2.5 0 0 1-4.6 0H4a1 1 0 0 1-1-1V7zm11 1.5V11h2.5L14 8.5zM7.5 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm9 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+          <span>Parcel&nbsp;Tracking</span>
+        </div>
+
+        <div class="tile tile-muted">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6zm3 2v5h2V8H7zm4 0v5h2V8h-2zm4 0v5h2V8h-2zM8 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+          <span>Transit&nbsp;Schedules</span>
+        </div>
+
+        <div class="tile tile-muted">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4.5 0 8 3 8 7.5 0 3.6-2.4 5.9-5.7 6.7l.7 3.3-3.4-2.1c-4.7-.3-7.6-3.2-7.6-6.9C4 6 7.5 3 12 3z"/></svg>
+          <span>Mastodon</span>
         </div>
 
         <div class="tile tile-muted">
@@ -131,6 +196,176 @@
         </div>
 
       </div>
+
+      <div class="module-blurbs">
+
+        <div class="blurb blurb-trio">
+          <div class="trio-shots">
+            <picture>
+              <source srcset="img/screens/module-email.webp" type="image/webp" />
+              <img src="img/screens/module-email.png" alt="DayFrame's Email module showing an inbox list with sample messages next to an empty reading pane" loading="lazy" />
+            </picture>
+            <picture>
+              <source srcset="img/screens/module-calendar.webp" type="image/webp" />
+              <img src="img/screens/module-calendar.png" alt="DayFrame's Calendar module showing a week view with sample events" loading="lazy" />
+            </picture>
+            <picture>
+              <source srcset="img/screens/module-contacts.webp" type="image/webp" />
+              <img src="img/screens/module-contacts.png" alt="DayFrame's Contacts module showing a sample contact list next to a contact detail card" loading="lazy" />
+            </picture>
+          </div>
+          <div class="blurb-text">
+            <h3>Email, Calendar &amp; Contacts</h3>
+            <p>
+              These three share one provider sign-in — Google today, with Microsoft&nbsp;365
+              sign-in in progress.
+            </p>
+          </div>
+        </div>
+
+        <div class="blurb blurb-shot">
+          <picture>
+            <source srcset="img/screens/github-views.webp" type="image/webp" />
+            <img src="img/screens/github-views.png" alt="DayFrame's GitHub module showing an open-PR list with labels next to a detail pane for a pull request" loading="lazy" />
+          </picture>
+          <div class="blurb-text">
+            <h3>GitHub</h3>
+            <p>
+              Pick repositories from a list instead of typing owner/name, and set how often
+              each one polls. An issue and PR feed keeps comments in sync and supports filters,
+              alongside a pane of monitored repositories and saved views — all within
+              GitHub's rate limits.
+            </p>
+          </div>
+        </div>
+
+        <div class="blurb blurb-shot">
+          <picture>
+            <source srcset="img/screens/rss-feed-list.webp" type="image/webp" />
+            <img src="img/screens/rss-feed-list.png" alt="DayFrame's RSS module in a three-pane layout: feed list with channel icon, headline list, and an open article" loading="lazy" />
+          </picture>
+          <div class="blurb-text">
+            <h3>RSS</h3>
+            <p>
+              A three-pane reader where feeds show their own channel logo. Pin any feed to the
+              rail as its own tile, carrying that logo with it. Remote content is sandboxed,
+              and images stay blocked until you allow them.
+            </p>
+          </div>
+        </div>
+
+        <div class="blurb blurb-text-only">
+          <div class="blurb-text">
+            <h3>Time</h3>
+            <p>
+              World-clock tiles for the places you care about. Pin any clock to the rail, and
+              copy a time in several formats when you need to share it.
+            </p>
+          </div>
+        </div>
+
+        <div class="blurb blurb-text-only">
+          <div class="blurb-text">
+            <h3>Weather, Market News &amp; Bluesky</h3>
+            <p>
+              Each has its own module view for a closer look, plus a matching board widget for
+              your dashboards.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="boards" id="boards">
+    <div class="wrap boards-inner">
+      <div class="boards-copy">
+        <h2>Boards: your own dashboards</h2>
+        <p>
+          Boards are customizable dashboards built from widgets drawn out of your modules —
+          arrange the pieces of your day exactly how you want to see them.
+        </p>
+        <p class="boards-widgets">
+          Widgets available today: Calendar day view, Calendar agenda, Weather conditions,
+          Bluesky recent posts, Market News watchlist, RSS, and Email folder.
+        </p>
+        <ul class="feature-list">
+          <li>A distinct edit mode for laying widgets out</li>
+          <li>Undo/redo, plus a whole-board reset</li>
+          <li>Renameable widgets</li>
+          <li>Per-board refresh cadence and density</li>
+          <li>Full keyboard support</li>
+          <li>Pin any board to the tile rail as its own tile</li>
+        </ul>
+      </div>
+      <div class="boards-shot">
+        <div class="shot-frame">
+          <picture>
+            <source srcset="img/screens/boards-edit.webp" type="image/webp" />
+            <img src="img/screens/boards-edit.png" alt="A DayFrame board in edit mode, with Undo, Redo, Check contrast, and Add widget controls above two renameable widgets" loading="lazy" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="personalization" id="personalization">
+    <div class="wrap">
+      <h2>Make it feel like yours</h2>
+      <p>
+        Feeling at home in DayFrame is a first-class goal, not an afterthought. Personalization
+        goes well beyond swapping a color.
+      </p>
+
+      <div class="preset-row">
+        <figure class="preset-item">
+          <picture>
+            <source srcset="img/screens/preset-midnight.webp" type="image/webp" />
+            <img src="img/screens/preset-midnight.png" alt="Midnight board style preset: a dark navy board with the style panel open" loading="lazy" />
+          </picture>
+          <figcaption>Midnight</figcaption>
+        </figure>
+        <figure class="preset-item">
+          <picture>
+            <source srcset="img/screens/preset-neon-tokyo.webp" type="image/webp" />
+            <img src="img/screens/preset-neon-tokyo.png" alt="Neon Tokyo board style preset: a deep purple board with magenta accents and a monospace font" loading="lazy" />
+          </picture>
+          <figcaption>Neon Tokyo</figcaption>
+        </figure>
+        <figure class="preset-item">
+          <picture>
+            <source srcset="img/screens/preset-paper.webp" type="image/webp" />
+            <img src="img/screens/preset-paper.png" alt="Paper board style preset: a cream board with a serif font" loading="lazy" />
+          </picture>
+          <figcaption>Paper</figcaption>
+        </figure>
+        <figure class="preset-item">
+          <picture>
+            <source srcset="img/screens/preset-atari.webp" type="image/webp" />
+            <img src="img/screens/preset-atari.png" alt="Atari 2600 board style preset: a wood-grain textured board with a retro font" loading="lazy" />
+          </picture>
+          <figcaption>Atari 2600</figcaption>
+        </figure>
+      </div>
+      <p class="preset-more">
+        Plus Dragon, Fairy, Mermaid, and Hot&nbsp;Dog&nbsp;Stand — eight presets in all, and
+        counting.
+      </p>
+
+      <ul class="feature-list feature-list-grid">
+        <li>Board style presets, ready to apply in one click</li>
+        <li>Your own wallpaper on a board</li>
+        <li>Texture backgrounds for boards and widget headers</li>
+        <li>Board-wide and per-widget typography</li>
+        <li>Widget header colors with automatically derived, readable foregrounds</li>
+        <li>Built-in contrast checking</li>
+        <li>Customizable tile chrome</li>
+        <li>A library of tile textures, and any tile color you like</li>
+      </ul>
+      <p class="muted">
+        Accessibility — contrast and legibility — is preserved across every theme.
+      </p>
     </div>
   </section>
 
@@ -138,16 +373,21 @@
     <div class="wrap coming-soon-inner">
       <h2>Coming soon</h2>
       <p>
-        DayFrame is under active development. Modules are being built and refined one at a
-        time, and there's no public build to install just yet - but the shell you see above is
-        real, running code.
+        DayFrame is in private preview, on the 0.4 preview series, with ten modules working
+        today. There's no public build to install just yet, but the private preview is real,
+        running software — not a mockup.
       </p>
+      <p class="muted">
+        Want to help shape what comes next? Vote on upcoming features and see what's planned on
+        the public roadmap.
+      </p>
+      <div class="cta-row">
+        <a class="cta" href="https://feedback.getdayframe.app" target="_blank" rel="noopener">Vote on what's next</a>
+        <a class="cta-secondary" href="mailto:info@getdayframe.app">Contact us</a>
+      </div>
       <p class="muted">
         Check back at <strong>getdayframe.app</strong> for updates as more of the day comes
         together.
-      </p>
-      <p class="muted">
-        Want to learn more? <a class="contact-link" href="mailto:info@getdayframe.app">Contact us</a>.
       </p>
     </div>
   </section>
@@ -160,6 +400,8 @@
     <span class="dot" aria-hidden="true">·</span>
     <span>Built with love in Philadelphia, PA</span>
     <span class="footer-links">
+      <a href="https://feedback.getdayframe.app" target="_blank" rel="noopener">Roadmap</a>
+      <span class="dot" aria-hidden="true">·</span>
       <a href="privacy.html">Privacy</a>
       <span class="dot" aria-hidden="true">·</span>
       <a href="terms.html">Terms</a>
