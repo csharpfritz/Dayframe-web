@@ -561,6 +561,18 @@ h1, h2 {
   color: var(--tile-blue-light);
 }
 
+/* OAuth scope names in the Google user data section. Monospace so a reader (or a Google reviewer
+   cross-referencing the consent screen) can tell an exact scope identifier from prose. */
+.legal code {
+  font-family: "Cascadia Mono", Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+  color: var(--text);
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 32px;

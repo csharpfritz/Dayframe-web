@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Privacy Policy — DayFrame</title>
-<meta name="description" content="DayFrame's privacy policy: how the local-first DayFrame app handles information, Google Sign-In, and connected services." />
+<meta name="description" content="DayFrame's privacy policy: how the local-first DayFrame app handles information, Google user data, Google Sign-In, and connected services." />
 
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png" />
@@ -38,7 +38,7 @@
     <a class="back-link" href="index.html">&larr; Back to DayFrame</a>
 
     <h1>Privacy Policy</h1>
-    <p class="updated"><strong>Last Updated:</strong> August 25, 2026</p>
+    <p class="updated"><strong>Last Updated:</strong> October 3, 2026</p>
 
     <section>
       <h2>Overview</h2>
@@ -81,6 +81,90 @@
       <p>
         This information is used solely for authentication and providing access to features
         that the user has authorized.
+      </p>
+    </section>
+
+    <section>
+      <h2>Google User Data</h2>
+      <p>
+        If a user connects a Google account, DayFrame requests only the permissions needed for
+        the features that account powers. Each permission, and what DayFrame does with it:
+      </p>
+      <ul>
+        <li>
+          <strong>Read your Gmail messages</strong> (<code>gmail.readonly</code>) &mdash; to display
+          your mail inside DayFrame's Email module.
+        </li>
+        <li>
+          <strong>Change the state of your Gmail messages</strong> (<code>gmail.modify</code>) &mdash;
+          to mark messages read or unread, archive them, and move them to Trash when you ask.
+        </li>
+        <li>
+          <strong>Send mail on your behalf</strong> (<code>gmail.send</code>) &mdash; to send the
+          messages you compose in DayFrame. DayFrame never sends mail you did not write and ask it
+          to send.
+        </li>
+        <li>
+          <strong>See and change your calendars</strong> (<code>calendar</code>) &mdash; to show your
+          events and to create or edit the events you create or edit in DayFrame.
+        </li>
+        <li>
+          <strong>See and change your contacts</strong> (<code>contacts</code>) &mdash; to show your
+          contacts and to save the changes you make in DayFrame.
+        </li>
+        <li>
+          <strong>See your primary email address</strong> (<code>userinfo.email</code>) &mdash; so
+          DayFrame can show you which account is connected.
+        </li>
+      </ul>
+      <p>
+        Google data reaches your computer directly from Google. It is not routed through, copied to,
+        or stored on any server operated by DayFrame, because DayFrame operates no such server.
+      </p>
+      <p>
+        A local copy is kept on your device so the app works offline and does not re-download the
+        same messages repeatedly. That copy is held in an encrypted database in your Windows local
+        application data folder, and the key for it is stored in Windows' own secure credential
+        storage, as are the access tokens for every account you connect.
+      </p>
+      <p>
+        DayFrame does not use Google user data for advertising, does not sell or transfer it, and no
+        human at DayFrame reads it. There is nowhere for anyone at DayFrame to read it from.
+      </p>
+    </section>
+
+    <section>
+      <h2>Google API Services Limited Use Disclosure</h2>
+      <p>
+        DayFrame's use and transfer of information received from Google APIs to any other app will
+        adhere to the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google
+        API Services User Data Policy</a>, including the Limited Use requirements.
+      </p>
+    </section>
+
+    <section>
+      <h2>Deleting Your Data and Revoking Access</h2>
+      <p>You can end DayFrame's access to a connected account at any time:</p>
+      <ul>
+        <li>
+          <strong>Disconnect it in DayFrame</strong>, from that service's settings page, which
+          deletes the stored credentials for it from your device.
+        </li>
+        <li>
+          <strong>Revoke DayFrame's access at the provider</strong>, which works whether or not
+          DayFrame is still installed &mdash; for Google, at
+          <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>.
+        </li>
+        <li>
+          <strong>Delete the local copy</strong> by removing the <code>DayFrame</code> folder from
+          your Windows local application data folder. Notes are not kept there &mdash; they are the
+          files in the folder you chose, and DayFrame does not copy them anywhere.
+        </li>
+      </ul>
+      <p>
+        Revoking access at the provider stops DayFrame fetching anything new. Deleting the local
+        folder removes what it already fetched.
       </p>
     </section>
 
