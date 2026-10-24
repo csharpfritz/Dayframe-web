@@ -38,49 +38,186 @@
     <a class="back-link" href="index.html">&larr; Back to DayFrame</a>
 
     <h1>Privacy Policy</h1>
-    <p class="updated"><strong>Last Updated:</strong> October 3, 2026</p>
+    <p class="updated"><strong>Last Updated:</strong> October 24, 2026</p>
 
     <section>
       <h2>Overview</h2>
       <p>
-        DayFrame is a personal productivity and cognitive workspace application that helps
-        users organize and view information from services they choose to connect.
-      </p>
-      <p>
-        DayFrame is designed as a local-first application. Information displayed and managed
-        within DayFrame remains on the user's device and within the external services the user
-        chooses to connect.
+        DayFrame is a desktop application that runs on your own computer. It connects to accounts
+        you choose &mdash; mail, calendar, contacts, code hosting, social, news and more &mdash; and
+        shows them in one place.
       </p>
       <p>This Privacy Policy explains how DayFrame handles information.</p>
     </section>
 
     <section>
-      <h2>Local-First Design</h2>
-      <p>DayFrame runs locally on the user's computer.</p>
+      <h2>There Is No DayFrame Server</h2>
       <p>
-        Information created, organized, viewed, or managed within DayFrame is stored on the
-        user's device or remains within the services the user has chosen to connect.
+        DayFrame has no backend. We do not operate a server that your data passes through, we do
+        not have an account system, and we never receive your messages, calendar, contacts, files or
+        credentials. There is nothing for us to hand over, sell or lose, because none of it reaches
+        us.
       </p>
       <p>
-        DayFrame does not operate a centralized service that stores user notes, tasks,
-        contacts, messages, emails, calendar events, workspace layouts, or other personal
-        content.
+        DayFrame contains no analytics, no telemetry and no crash reporting: nothing about how you
+        use it, or about a crash, is ever sent anywhere. It does keep two kinds of diagnostic file
+        <strong>on your computer only</strong>, so that a problem can be investigated if you choose
+        to share them:
+      </p>
+      <ul>
+        <li>
+          <strong>A crash file</strong> when DayFrame closes because of an error nothing else
+          handled, holding when it happened, which build was running and the error's technical
+          details. Crash files older than 30 days are deleted at startup.
+        </li>
+        <li>
+          <strong>A log</strong> of what the app did, one file a day, with the last seven kept.
+        </li>
+      </ul>
+      <p>
+        Both are written to the <code>DayFrame</code> folder under <code>%LOCALAPPDATA%</code>.
+        DayFrame never uploads either one.
+      </p>
+    </section>
+
+    <section>
+      <h2>What Stays on Your Computer</h2>
+      <ul>
+        <li>
+          <strong>Your cached content</strong> &mdash; the mail, calendar events, contacts and other
+          items DayFrame has fetched &mdash; is stored in a database file, <code>dayframe.vault</code>.
+          Installed from the zip, it is in <code>%LOCALAPPDATA%\DayFrame</code>; installed as a
+          package (including from the Microsoft Store), it is in that package's own local data
+          folder, which Windows deletes when you uninstall the app.
+        </li>
+        <li>
+          <strong>That database is encrypted</strong> with a 256-bit key generated on your computer
+          the first time DayFrame runs.
+        </li>
+        <li>
+          <strong>That key, and your access tokens for every connected account, are held in Windows'
+          own secure storage</strong>, not in a file DayFrame writes. So are a mail password or app
+          password for a Yahoo, AOL or other IMAP account (stored only after the mail server has
+          accepted it) and an Asana token you paste in.
+        </li>
+        <li>
+          <strong>Your notes are your own files.</strong> The Notes module reads and writes a vault
+          folder that you point it at. DayFrame does not copy it anywhere.
+        </li>
+        <li>
+          <strong>Your settings</strong> &mdash; which modules are on, the tile layout, theme, pane
+          zoom, folder choices &mdash; are stored in Windows' application settings for DayFrame and
+          are <strong>not</strong> encrypted. They hold preferences, not message content.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What Leaves Your Computer, and to Whom</h2>
+      <p>
+        Only to the services you connect, and only to the extent needed to show you your own data
+        &mdash; or, where a module can change something, to carry out an action you took in
+        DayFrame. Today those actions are:
+      </p>
+      <ul>
+        <li><strong>Email</strong> sends the messages you write, and moves, archives, deletes and marks messages read or unread when you do.</li>
+        <li><strong>Calendar</strong> creates, edits and deletes the events you create, edit and delete.</li>
+        <li><strong>Contacts</strong> creates, edits and deletes the contacts you create, edit and delete.</li>
+        <li><strong>Mastodon</strong> favorites and bookmarks a post, and undoes either, when you click to.</li>
+        <li><strong>Asana</strong> completes and reopens tasks, changes due dates, adds comments and adds tasks.</li>
+      </ul>
+      <p>Every other module only reads. DayFrame talks to:</p>
+      <ul>
+        <li>
+          <strong>Google</strong> (<code>accounts.google.com</code>, <code>oauth2.googleapis.com</code>,
+          <code>gmail.googleapis.com</code>, <code>people.googleapis.com</code>,
+          <code>www.googleapis.com</code>) &mdash; sign-in, and your mail, calendar and contacts.
+        </li>
+        <li>
+          <strong>Mail providers you connect in Email settings</strong> &mdash; Yahoo Mail, AOL Mail,
+          iCloud Mail, Posteo, Mailbox.org, WEB.DE, GMX, Telekom, freenet Mail, Vivaldi Webmail and
+          Zoho Mail (the servers for the data center and account type you choose) &mdash; and any
+          IMAP and SMTP server you enter yourself, to read and send your mail.
+        </li>
+        <li>
+          <strong>Calendar and contacts servers you connect</strong> &mdash; Posteo, Mailbox.org,
+          Zoho and Yahoo over CalDAV and CardDAV, and any CalDAV or CardDAV server you enter
+          yourself. DayFrame knows the built-in addresses already, so finding them sends nothing
+          anywhere.
+        </li>
+        <li>
+          <strong>Your email address's own mail domain</strong>, only when you click
+          <strong>Find settings</strong> while connecting a mail account, or <strong>Find
+          server</strong> in Calendar settings, to read the server settings your provider publishes
+          (its autoconfig and <code>.well-known</code> addresses, and DNS service records looked up
+          through your computer's normal DNS servers). Only the domain is sent, never the part of
+          your address before the @, and nothing is sent to a third-party settings database.
+        </li>
+        <li>
+          <strong>GitHub</strong> (<code>github.com</code>, <code>api.github.com</code>) &mdash;
+          sign-in, and your issues, pull requests and notifications.
+        </li>
+        <li>
+          <strong>Bluesky</strong> (<code>bsky.social</code>, <code>bsky.app</code>,
+          <code>cdn.bsky.app</code>) &mdash; sign-in, and your timeline.
+        </li>
+        <li>
+          <strong>Twitch</strong> (<code>id.twitch.tv</code>, <code>api.twitch.tv</code>) &mdash;
+          sign-in, and your own channel's live state, title, category, viewer count, follower and
+          subscriber totals and schedule, and which channels you follow are live. DayFrame asks to
+          read your follows (<code>user:read:follows</code>), your follower count
+          (<code>moderator:read:followers</code>) and your subscriber count
+          (<code>channel:read:subscriptions</code>), and nothing else: it can't post, chat or change
+          your channel. Your own profile picture is the one image it loads.
+        </li>
+        <li>
+          <strong>The Mastodon server you sign in to</strong> &mdash; registering DayFrame as an app
+          on that server, sign-in, reading your home timeline, notifications, favorites and
+          bookmarks, and favoriting or bookmarking a post when you click to. DayFrame asks to read
+          your account (<code>read</code>) and to change your favorites and bookmarks
+          (<code>write:favourites</code>, <code>write:bookmarks</code>), and nothing else: it can't
+          post, boost, follow or delete anything. Avatars, attachments, link previews and custom
+          emoji are loaded from the addresses your server gives &mdash; normally its own media host.
+        </li>
+        <li>
+          <strong>Asana</strong> (<code>app.asana.com</code>) &mdash; the tasks assigned to you, and
+          the changes you make to them.
+        </li>
+        <li>
+          <strong>Open-Meteo</strong> (<code>api.open-meteo.com</code>,
+          <code>geocoding-api.open-meteo.com</code>) &mdash; weather for a place you name.
+        </li>
+        <li>
+          <strong>Finnhub</strong> (<code>finnhub.io</code>) and <strong>Yahoo Finance</strong>
+          (<code>query1.finance.yahoo.com</code>) &mdash; quotes and headlines for tickers you add.
+        </li>
+        <li>
+          <strong>Lens by Thought Industries</strong> (<code>api.lens.thoughtindustries.com</code>)
+          &mdash; answering the questions you type on the Help page. The request carries your
+          question, the Lens API key DayFrame includes (or your own, if you saved one in Help
+          settings) and, for a follow-up, the id of the thread you are continuing. Nothing is sent
+          until you ask a question.
+        </li>
+        <li>
+          <strong>ESPN</strong> (<code>site.api.espn.com</code>) &mdash; scores and headlines for the
+          leagues you follow, once you turn the Sports module on. The request names the league,
+          never the teams you follow.
+        </li>
+        <li><strong>Any RSS or Atom feed you subscribe to</strong> &mdash; fetching that feed.</li>
+      </ul>
+      <p>
+        Each request goes straight from your computer to that service. If you do not connect an
+        account or add a feed, DayFrame never contacts it. You remain subject to the privacy
+        policies and terms of the services you choose to connect.
       </p>
     </section>
 
     <section>
       <h2>Google Sign-In</h2>
-      <p>DayFrame may allow users to authenticate using Google Sign-In.</p>
-      <p>Google may provide certain account information necessary to authenticate the user, such as:</p>
-      <ul>
-        <li>Name</li>
-        <li>Email address</li>
-        <li>Profile image</li>
-        <li>Unique account identifier</li>
-      </ul>
       <p>
-        This information is used solely for authentication and providing access to features
-        that the user has authorized.
+        DayFrame may allow users to connect a Google account. The only account information DayFrame
+        asks Google for is your <strong>primary email address</strong>, so it can show you which
+        account is connected. It does not request your name or profile image.
       </p>
     </section>
 
@@ -106,7 +243,7 @@
         </li>
         <li>
           <strong>See and change your calendars</strong> (<code>calendar</code>) &mdash; to show your
-          events and to create or edit the events you create or edit in DayFrame.
+          events and to create, edit or delete the events you create, edit or delete in DayFrame.
         </li>
         <li>
           <strong>See and change your contacts</strong> (<code>contacts</code>) &mdash; to show your
@@ -123,9 +260,9 @@
       </p>
       <p>
         A local copy is kept on your device so the app works offline and does not re-download the
-        same messages repeatedly. That copy is held in an encrypted database in your Windows local
-        application data folder, and the key for it is stored in Windows' own secure credential
-        storage, as are the access tokens for every account you connect.
+        same messages repeatedly. That copy is held in the encrypted database described above, and
+        the key for it is stored in Windows' own secure storage, as are the access tokens for every
+        account you connect.
       </p>
       <p>
         DayFrame does not use Google user data for advertising, does not sell or transfer it, and no
@@ -144,90 +281,133 @@
     </section>
 
     <section>
+      <h2>Remote Content Is Not Trusted</h2>
+      <p>
+        Mail, posts and feed articles are shown in an isolated sandbox with scripts disabled and
+        remote images blocked, so a message cannot run code or quietly load a tracking pixel. If an
+        item contains blocked content, DayFrame says so and lets you allow it for that one item.
+        Allowing images lasts for the rest of the app session and is never written to disk; allowing
+        scripts lasts only while you are looking at that item. Neither choice is ever remembered for
+        a sender, a feed or a domain.
+      </p>
+      <p>
+        Mastodon posts are the exception. Your Mastodon server already cleans every post, including
+        ones from other servers, before DayFrame receives it, so DayFrame shows that cleaned post as
+        your server formatted it and loads its avatars, attachments and link previews without
+        asking. Those images normally come from your own server's media host; sensitive attachments
+        stay hidden until you click to show them.
+      </p>
+    </section>
+
+    <section>
       <h2>Deleting Your Data and Revoking Access</h2>
-      <p>You can end DayFrame's access to a connected account at any time:</p>
+      <p>
+        Do these in order: <strong>disconnect first, then uninstall or delete.</strong>
+        Disconnecting inside DayFrame is what revokes DayFrame's access at the provider, where the
+        provider lets an app do that. Deleting files on your computer removes only what DayFrame
+        already fetched, and leaves the provider's grant live.
+      </p>
       <ul>
         <li>
-          <strong>Disconnect it in DayFrame</strong>, from that service's settings page, which
-          deletes the stored credentials for it from your device.
+          <strong>Delete everything DayFrame holds &mdash; Microsoft Store install:</strong>
+          disconnect each account (below), then uninstall DayFrame from Windows <strong>Settings
+          &rarr; Apps</strong>. Everything a Store install stores &mdash; the encrypted content
+          database, its key, your access tokens and your settings &mdash; lives in the package's own
+          data folders, and Windows removes them with the package. Deleting a <code>DayFrame</code>
+          folder in <code>%LOCALAPPDATA%</code> does <strong>not</strong> delete a Store install's
+          data.
         </li>
         <li>
-          <strong>Revoke DayFrame's access at the provider</strong>, which works whether or not
-          DayFrame is still installed &mdash; for Google, at
-          <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>.
+          <strong>Delete everything DayFrame holds &mdash; zip install:</strong> disconnect each
+          account, close DayFrame, then delete <strong>two</strong> folders:
+          <code>%LOCALAPPDATA%\DayFrame</code> (the encrypted content database) and
+          <code>%LOCALAPPDATA%\&lt;your user name&gt;\com.csharpfritz.dayframe</code> (Windows'
+          secure storage for the database key and your access tokens, plus your preferences).
+          Deleting only the first folder leaves your access tokens on disk.
+        </li>
+        <li>Your <strong>Notes vault</strong> is your own folder and neither step touches it.</li>
+      </ul>
+      <p><strong>Disconnecting an account.</strong> Each Disconnect clears some things and leaves others:</p>
+      <ul>
+        <li>
+          <strong>Google</strong> &mdash; in <strong>Settings &rarr; Shared Providers</strong>,
+          because one Google account serves Email, Calendar and Contacts together. Disconnecting
+          revokes DayFrame's access at Google, deletes the stored credentials, and deletes the
+          cached mail, calendar and contacts. If Google cannot be reached, DayFrame still
+          disconnects locally and says that the access could not be revoked and where to revoke it
+          by hand.
         </li>
         <li>
-          <strong>Delete the local copy</strong> by removing the <code>DayFrame</code> folder from
-          your Windows local application data folder. Notes are not kept there &mdash; they are the
-          files in the folder you chose, and DayFrame does not copy them anywhere.
+          <strong>GitHub</strong> &mdash; Disconnect on the GitHub settings page deletes the stored
+          token, every cached issue, pull request and comment, and the tile's content; connecting a
+          different GitHub account does the same. It does not revoke the token at GitHub, which
+          requires a client secret DayFrame does not hold, so the settings page tells you GitHub
+          still lists DayFrame as authorized and links to where you remove it.
+        </li>
+        <li>
+          <strong>Bluesky</strong> &mdash; Disconnect deletes the stored session and the cached
+          timeline and notifications first, then asks your server to end the session. If your
+          server cannot be reached it still disconnects locally and says so; revoke the app password
+          in your Bluesky settings to be sure.
+        </li>
+        <li>
+          <strong>Mastodon</strong> &mdash; Disconnect asks your server to revoke DayFrame's access,
+          forgets the account either way, and if the server did not confirm the revocation tells you
+          to check the server's Authorized apps page.
+        </li>
+        <li>
+          <strong>Twitch</strong> &mdash; Disconnect revokes the token at Twitch, deletes the stored
+          token and the connection, and deletes every cached Twitch item (stream state, viewer
+          samples, schedule and followed channels).
+        </li>
+        <li>
+          <strong>Asana</strong> &mdash; Disconnect deletes the stored personal access token and the
+          connection, and forgets the watched projects and cached tasks. The token itself stays valid
+          at Asana until you delete it there.
+        </li>
+        <li>
+          <strong>Yahoo, AOL and other IMAP accounts</strong> &mdash; <strong>Remove</strong> on that
+          account in <strong>Settings &rarr; Email</strong> deletes its stored password and the
+          cached mail. The app password stays valid at the provider until you delete it there.
         </li>
       </ul>
       <p>
-        Revoking access at the provider stops DayFrame fetching anything new. Deleting the local
-        folder removes what it already fetched.
+        <strong>Revoking DayFrame's access at the provider</strong>, which you can do whether or not
+        DayFrame is still installed:
+      </p>
+      <ul>
+        <li>Google &mdash; <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a></li>
+        <li>GitHub &mdash; <a href="https://github.com/settings/applications" target="_blank" rel="noopener noreferrer">github.com/settings/applications</a></li>
+        <li>Bluesky &mdash; revoke the app password in your Bluesky settings</li>
+        <li>Twitch &mdash; <a href="https://www.twitch.tv/settings/connections" target="_blank" rel="noopener noreferrer">twitch.tv/settings/connections</a>, under Other Connections</li>
+        <li>Mastodon &mdash; remove DayFrame under Preferences &rarr; Account &rarr; Authorized apps on your server</li>
+        <li>Yahoo and AOL &mdash; delete the app password you created for DayFrame in the account's security settings</li>
+        <li>
+          Asana &mdash; delete the personal access token at
+          <a href="https://app.asana.com/0/my-apps" target="_blank" rel="noopener noreferrer">app.asana.com/0/my-apps</a>.
+          Asana is connected with a token you create and paste in yourself rather than by
+          authorizing an app, so there is no &ldquo;DayFrame&rdquo; entry to revoke &mdash; and
+          deleting that token also stops anything else you pasted it into.
+        </li>
+      </ul>
+      <p>
+        Revoking access at the provider stops DayFrame fetching anything new; uninstalling, or
+        deleting the local folders, removes what it already fetched.
       </p>
     </section>
 
     <section>
-      <h2>Connected Services</h2>
+      <h2>Data Collection and Sharing</h2>
       <p>
-        Users may choose to connect third-party services, including services provided by
-        Google and other providers.
-      </p>
-      <p>Examples may include:</p>
-      <ul>
-        <li>Email</li>
-        <li>Calendar</li>
-        <li>Contacts</li>
-        <li>Notes</li>
-        <li>Files</li>
-        <li>Source control systems</li>
-        <li>Social platforms</li>
-      </ul>
-      <p>
-        DayFrame accesses information from connected services only after a user has explicitly
-        authorized access.
+        DayFrame does not collect your notes, tasks, email, calendar, contacts, messages, workspace
+        layouts or any other content, and it collects no analytics, behavioral tracking data or
+        usage telemetry. DayFrame does not maintain a centralized database containing user content.
       </p>
       <p>
-        Information accessed from connected services is displayed and organized within
-        DayFrame on the user's device.
+        Because none of it reaches DayFrame, DayFrame does not sell, rent, share, or disclose user
+        content to third parties. Information displayed within DayFrame comes from your own
+        computer or from services you have explicitly connected and authorized.
       </p>
-      <p>
-        Users remain subject to the privacy policies and terms of the services they choose to
-        connect.
-      </p>
-    </section>
-
-    <section>
-      <h2>Data Collection</h2>
-      <p>DayFrame does not collect:</p>
-      <ul>
-        <li>User notes</li>
-        <li>Tasks</li>
-        <li>Email content</li>
-        <li>Calendar content</li>
-        <li>Contacts</li>
-        <li>Messages</li>
-        <li>Workspace layouts</li>
-        <li>User-generated content</li>
-        <li>Analytics</li>
-        <li>Behavioral tracking data</li>
-        <li>Usage telemetry</li>
-      </ul>
-      <p>DayFrame does not maintain a centralized database containing user content.</p>
-    </section>
-
-    <section>
-      <h2>Data Sharing</h2>
-      <p>
-        Because DayFrame does not collect or store user content on DayFrame-operated servers,
-        DayFrame does not sell, rent, share, or disclose user content to third parties.
-      </p>
-      <p>Information displayed within DayFrame originates from:</p>
-      <ul>
-        <li>The user's local device, or</li>
-        <li>Services that the user has explicitly connected and authorized.</li>
-      </ul>
     </section>
 
     <section>
@@ -246,8 +426,10 @@
 
     <section>
       <h2>Changes to This Policy</h2>
-      <p>DayFrame may update this Privacy Policy from time to time as the application evolves.</p>
-      <p>Any updates will be published on the DayFrame website.</p>
+      <p>
+        If this policy changes, the new version will be published on the DayFrame website with its
+        date.
+      </p>
     </section>
 
     <section>
