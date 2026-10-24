@@ -318,6 +318,20 @@ a.pill:hover {
   border-radius: 4px;
 }
 
+/* A screenshot at the foot of a feature card. Opens in the lightbox like the other shots. */
+.feature-shot {
+  margin: 4px 0 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.feature-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* Modules / tile grid */
 
 .modules {
