@@ -1,7 +1,7 @@
 # DayFrame-Web
 
 This repository is the static brochure/marketing website for **DayFrame**, a
-desktop-first app for Windows and Mac that brings email, calendar, contacts,
+desktop-first app for Windows (Mac support is planned) that brings email, calendar, contacts,
 and other personal-productivity modules together behind one Outlook-style
 shell with a Windows-Phone-inspired live-tile navigation rail.
 
