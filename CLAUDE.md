@@ -30,12 +30,14 @@ hand-written HTML/CSS.
 - The site's visual identity intentionally mirrors the app's own tile-rail
   UI (bold blue gradient squares, dark navy background) — keep new sections
   and assets consistent with the palette in `style.css`.
-- The app is in **private preview** (v0.6, released 2026-10-18, the last
-  private preview before a public one). There is no public download: the
-  source repo is private and builds go to testers by hand, so the site
-  points people at `info@getdayframe.app` instead of a download link.
-- When a new release ships, update the header pill, the "What's new"
+- DayFrame 1.0 is a **public preview in the Microsoft Store**
+  (https://apps.microsoft.com/detail/9MW9FNK1H1N3, Store ID `9MW9FNK1H1N3`). The site's
+  download is the official "Download from the Microsoft Store" badge, kept as a local copy in
+  `site/img/ms-store-badge.svg` so visitors never fetch Microsoft artwork just to see the page.
+  There is no public zip download: the source repo is private.
+- When a new release ships, update the meta descriptions, the "What's new"
   section (eyebrow date, heading, feature cards), the module tile grid
   (`tile-live` on by default, `tile-optin` disabled by default, `tile-muted`
-  planned) and the preview-status section. Keep feature claims to what the
-  GitHub release notes for that tag actually list.
+  planned) and the "Get DayFrame" section. Keep feature claims to what the
+  GitHub release notes for that tag actually list, and merge release content only once the
+  Store is serving that build.

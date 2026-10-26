@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>DayFrame — Your day, in one frame</title>
-<meta name="description" content="DayFrame is a desktop app for Windows that brings your email, calendar, contacts, notes, boards, and more together behind one familiar shell with a live-tile navigation rail. Now in private preview (v0.6)." />
+<meta name="description" content="DayFrame is a desktop app for Windows that brings your email, calendar, contacts, notes, boards, and more together behind one familiar shell with a live-tile navigation rail. Free in the Microsoft Store (1.0 Preview)." />
 
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png" />
@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="DayFrame" />
 <meta property="og:url" content="https://getdayframe.app/" />
 <meta property="og:title" content="DayFrame — Your day, in one frame" />
-<meta property="og:description" content="A desktop app for Windows that brings your email, calendar, contacts, notes, boards, and more together behind one familiar shell with a live-tile navigation rail. Now in private preview (v0.6)." />
+<meta property="og:description" content="A desktop app for Windows that brings your email, calendar, contacts, notes, boards, and more together behind one familiar shell with a live-tile navigation rail. Free in the Microsoft Store (1.0 Preview)." />
 <meta property="og:image" content="https://getdayframe.app/img/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -24,10 +24,11 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="DayFrame — Your day, in one frame" />
-<meta name="twitter:description" content="A desktop app for Windows that brings your email, calendar, contacts, notes, boards, and more together behind one familiar shell with a live-tile navigation rail. Now in private preview (v0.6)." />
+<meta name="twitter:description" content="A desktop app for Windows that brings your email, calendar, contacts, notes, boards, and more together behind one familiar shell with a live-tile navigation rail. Free in the Microsoft Store (1.0 Preview)." />
 <meta name="twitter:image" content="https://getdayframe.app/img/og-image.png" />
 
 <link rel="stylesheet" href="css/style.css" />
+<script src="js/platform.js"></script>
 <script src="js/lightbox.js" defer></script>
 </head>
 <body>
@@ -39,9 +40,11 @@
       <span class="brand-name">DayFrame</span>
     </div>
     <nav class="header-links" aria-label="Site">
-      <a class="header-link" href="#whats-new">What's new in v0.6</a>
+      <a class="header-link" href="#whats-new">What's new</a>
       <a class="roadmap-link" href="https://feedback.getdayframe.app" target="_blank" rel="noopener">Roadmap</a>
-      <a class="pill" href="#preview">Private preview · v0.6</a>
+      <a class="store-badge store-badge-sm" href="https://apps.microsoft.com/detail/9MW9FNK1H1N3" target="_blank" rel="noopener">
+        <img src="img/ms-store-badge.svg" alt="Download from the Microsoft Store" width="161" height="44" />
+      </a>
     </nav>
   </div>
 </header>
@@ -59,8 +62,10 @@
           Mac support is planned.
         </p>
         <div class="hero-actions">
-          <a class="cta" href="#whats-new">See what's new in v0.6</a>
-          <a class="cta cta-outline" href="#preview">Join the preview</a>
+          <a class="store-badge" href="https://apps.microsoft.com/detail/9MW9FNK1H1N3" target="_blank" rel="noopener">
+            <img src="img/ms-store-badge.svg" alt="Download from the Microsoft Store" width="161" height="44" />
+          </a>
+          <a class="cta cta-outline" href="#whats-new">What's new in 1.0 Preview 2</a>
         </div>
       </div>
       <div class="hero-shot">
@@ -101,103 +106,75 @@
 
   <section class="whats-new" id="whats-new">
     <div class="wrap">
-      <p class="eyebrow">Preview 4 · released October 18, 2026</p>
-      <h2>What's new in v0.6</h2>
+      <p class="eyebrow">1.0 Preview 2 · October 2026</p>
+      <h2>What's new in 1.0 Preview 2</h2>
       <p class="whats-new-lede">
-        v0.6 is the biggest DayFrame release so far, and the last private preview before the
-        first public one. Three months of work landed in it: email that works with any mail
-        provider, calendar and contacts on open standards, four new modules, and a long list of
-        stability fixes aimed at the day strangers install the app for the first time.
+        DayFrame 1.0 is a public preview, and anyone on Windows can install it from the Microsoft
+        Store. Preview 2 is the first build to arrive through the Store's own updates. It brings
+        a welcome tour, a Twitch module, boards you lay out freely, a much richer Weather, tiles
+        that sparkle, and a long list of speed and polish work.
       </p>
 
       <div class="feature-grid">
 
         <article class="feature">
-          <h3>Email for any provider, and more than one of them</h3>
+          <h3>In the Microsoft Store</h3>
           <p>
-            Email is no longer Gmail-only. Add any IMAP account, with ready-made presets for Yahoo,
-            AOL, Posteo, Mailbox.org, Zoho, WEB.DE, GMX, Telekom, freenet and Vivaldi — or type a
-            bare host name and let <em>Find settings</em> discover the rest. Connect several
-            accounts side by side, each with its own tile and its own <em>From</em> when you compose.
+            Install DayFrame from the Microsoft Store and the Store keeps it up to date. The
+            package is signed, so there's no SmartScreen warning to click through. It runs on
+            Windows 10 and 11, on both x64 and Arm64 PCs.
           </p>
           <p>
-            Compose with rich formatting, pin important messages to the top of a folder, open two
-            messages side by side in split view, mark a whole folder read, and turn a message into
-            a contact or a calendar event without leaving it.
+            Already running the zip build from a private preview? The first time the Store
+            version starts, it brings your settings and accounts across.
           </p>
         </article>
 
         <article class="feature">
-          <h3>Calendar and Contacts on open standards</h3>
+          <h3>A welcome on first start</h3>
           <p>
-            Calendar speaks CalDAV and Contacts speaks CardDAV, so your Posteo, Mailbox.org, Zoho
-            or self-hosted server works alongside Google. Repeating events can be edited and
-            deleted, a new event goes into the calendar you choose, and sync is incremental so a
-            refresh costs seconds, not minutes.
-          </p>
-          <p>
-            One connection is shared across Email, Calendar and Contacts. Sign in once, and
-            DayFrame asks before removing an account another module still depends on.
+            A new welcome tour introduces every module and lets you pick which ones to turn on.
+            It also covers appearance and getting around, and you can reopen it any time from the
+            Application menu. Fewer modules start switched on, and Email, Calendar and Contacts
+            say plainly how to connect an account rather than sitting empty.
           </p>
         </article>
 
         <article class="feature">
-          <h3>Four new modules</h3>
-          <ul>
-            <li><strong>Asana</strong> — My Tasks grouped by due date, project activity, task
-              detail, and write actions: complete, reschedule, comment, quick-add. Pin a project or
-              a single task to the rail, and drop Focus, Workload, Week-ahead and Due-today widgets
-              on a board.</li>
-            <li><strong>Mastodon</strong> — sign in to any instance for your home timeline and
-              notifications, favorite and bookmark posts, and pin a saved hashtag to the rail.</li>
-            <li><strong>Sports</strong> — live scores, finals and headlines for the NFL, NBA, MLB,
-              NHL, college football and the major international football competitions. Favorite a
-              team and it leads the tile.</li>
-            <li><strong>Time</strong> — a glanceable clock tile for the zones you care about, with
-              a right-click to copy the current time in the format you need.</li>
-          </ul>
-          <button type="button" class="shot-trigger feature-shot" aria-label="View larger image">
-            <picture>
-              <source srcset="img/screens/whats-new-sports.webp" type="image/webp" />
-              <img src="img/screens/whats-new-sports.png" alt="DayFrame's Sports module showing live college football scores beside a column of headlines" loading="lazy" />
-            </picture>
-          </button>
-        </article>
-
-        <article class="feature">
-          <h3>Boards that know who you mean</h3>
+          <h3>Twitch, for streamers</h3>
           <p>
-            A board widget can now be bound to a person, and it renders everything every module
-            knows about them — their mail, their events, their tasks — on one card. Bluesky saved
-            searches, Mastodon hashtags, Sports teams and Asana projects all arrive as new widgets,
-            and your pinned tiles live in Appearance settings beside the tile overrides.
+            Sign in with a short device code, and your channel's tile shows when you're live and
+            how many people are watching. The Twitch dashboard adds your stream title, category,
+            follower and subscriber totals and your schedule, plus which of the channels you
+            follow are live right now.
           </p>
         </article>
 
         <article class="feature">
-          <h3>Notes, hardened</h3>
+          <h3>Boards on a free grid</h3>
           <p>
-            The Markdown notes module that debuted in v0.5 gained inline <code>[[</code> wikilink
-            autocomplete while you type, and a long list of fixes from a line-by-line review:
-            renames that never leave a dangling link, line endings that survive an edit, and an
-            editor that never throws away unsaved work silently. Your vault stays yours — it is
-            plain files on disk, and Obsidian can open it at the same time.
+            Boards now lay widgets out on a grid you control: drag a widget anywhere and resize it
+            from any side. Repositories you watch on GitHub can go on a board as widgets too.
+            If one widget can't load, only that card says so, and the rest of the board carries on.
           </p>
-          <button type="button" class="shot-trigger feature-shot" aria-label="View larger image">
-            <picture>
-              <source srcset="img/screens/whats-new-notes.webp" type="image/webp" />
-              <img src="img/screens/whats-new-notes.png" alt="DayFrame's Notes module with a vault of project and recipe notes, a Garden Plan note open in the editor, and its backlinks underneath" loading="lazy" />
-            </picture>
-          </button>
         </article>
 
         <article class="feature">
-          <h3>Tiles with more personality</h3>
+          <h3>Weather in detail</h3>
           <p>
-            A module's logo can fill its tile or sit centered with an adjustable title strip. Pick
-            any rail color from a Paint-style picker, collapse empty rows from the rail's context
-            menu, and the live tiles now pre-scale their textures and pause their flip clock when
-            the window is hidden, so a full rail costs less than it did.
+            The Weather module adds today's details, the next 24 hours and a seven-day chance of
+            rain, and you can switch between your locations. The tile's back face splits into the
+            days ahead, and the tile icon can show the condition and the temperature together.
+          </p>
+        </article>
+
+        <article class="feature">
+          <h3>Tiles that sparkle (and drip)</h3>
+          <p>
+            Five glitter textures (silver, gold, red, green and blue) twinkle on the rail, and the
+            new Green Slime material drips and wobbles. The light theme gets a light navigation
+            pane, toolbar and title bar to match, and the tile menu is grouped by what you're
+            trying to do.
           </p>
           <button type="button" class="shot-trigger feature-shot" aria-label="View larger image">
             <picture>
@@ -208,16 +185,26 @@
         </article>
 
         <article class="feature">
-          <h3>Built for the first public install</h3>
+          <h3>At home in Windows</h3>
           <ul>
-            <li>Your local cache is encrypted at rest, and nothing waits on it before the first frame.</li>
-            <li>A rolling diagnostics log, a log folder and <em>Copy diagnostics</em> in About,
-              plus crash handling that tells you when the app didn't shut down cleanly.</li>
-            <li>Sync starts on launch with the visible tiles first, and modules back off politely
-              when a provider rate-limits them.</li>
-            <li>GitHub signs in with the device flow, so the app ships no client secret, and a
-              Google account can be disconnected — and revoked — from inside DayFrame.</li>
-            <li>Windows builds for both x64 and Arm64.</li>
+            <li>Opening DayFrame again brings up the window you already have, and the taskbar
+              jump list opens Email, Calendar, Contacts or Notes directly.</li>
+            <li>Your tiles' counts add up to a badge on the taskbar icon.</li>
+            <li>DayFrame can start when you sign in to Windows. It's off unless you turn it on.</li>
+            <li>The title bar stays readable in the dark theme.</li>
+          </ul>
+        </article>
+
+        <article class="feature">
+          <h3>Faster, lighter, and better behaved</h3>
+          <ul>
+            <li>Google Calendar and Contacts and CalDAV/CardDAV servers sync only what changed,
+              and cached mail, events and posts stay available offline.</li>
+            <li>Notes keeps its index between runs, and long contact lists scroll smoothly
+              with an A-Z jump.</li>
+            <li>GitHub pull requests show their check status. In Email you can hide preview text
+              and archive from the keyboard. RSS can follow a subreddit.</li>
+            <li>The Help page answers questions you type about DayFrame.</li>
           </ul>
         </article>
 
@@ -229,8 +216,8 @@
     <div class="wrap">
       <h2>Built to grow, module by module</h2>
       <p class="modules-lede">
-        Twelve modules are on by default in v0.6, two more are a switch away in Settings, and more
-        arrive over time.
+        Seven everyday modules start on, seven more are a switch away in Settings, and Boards
+        pulls them all together. More arrive over time.
       </p>
 
       <h3 class="modules-group-h">Available now</h3>
@@ -252,33 +239,13 @@
         </div>
 
         <div class="tile tile-live">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.4 9.4 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-          <span>GitHub</span>
-        </div>
-
-        <div class="tile tile-live">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-2.2 2.6-5.6 2.9-8 1.3 1 2.7 3 4.6 5.7 5-1.1 1-2.9 1.7-5.2 1.7 2.8 2 6.5 2.1 8.8-.3 2.3 2.4 6 2.3 8.8.3-2.3 0-4.1-.7-5.2-1.7 2.7-.4 4.7-2.3 5.7-5-2.4 1.6-5.8 1.3-8-1.3-.4-.4-1.2-.4-1.6 0z"/></svg>
-          <span>Bluesky</span>
-        </div>
-
-        <div class="tile tile-live">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0-7c7.18 0 13 5.82 13 13h-3c0-5.52-4.48-10-10-10v-3zm0-7c11.05 0 20 8.95 20 20h-3c0-9.39-7.61-17-17-17V3z"/></svg>
-          <span>RSS</span>
-        </div>
-
-        <div class="tile tile-live">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2 4v1.5h10V7H7zm0 4v1.5h10V11H7zm0 4v1.5h6V15H7z"/></svg>
           <span>Notes</span>
         </div>
 
         <div class="tile tile-live">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z"/></svg>
-          <span>Boards</span>
-        </div>
-
-        <div class="tile tile-live">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4.5 0 8 3 8 7.5 0 3.6-2.4 5.9-5.7 6.7l.7 3.3-3.4-2.1c-4.7-.3-7.6-3.2-7.6-6.9C4 6 7.5 3 12 3z"/></svg>
-          <span>Mastodon</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.75 5v5.4l4.2 2.5-.75 1.25-5-3V7h1.55z"/></svg>
+          <span>Time</span>
         </div>
 
         <div class="tile tile-live">
@@ -287,13 +254,37 @@
         </div>
 
         <div class="tile tile-live">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16v1.5H4V19zm1-3.6 4.5-4.9 3 3 5.7-6.3 1.3 1.2-7 7.7-3-3L6.1 16.6 5 15.4z"/></svg>
-          <span>Market&nbsp;News</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0-7c7.18 0 13 5.82 13 13h-3c0-5.52-4.48-10-10-10v-3zm0-7c11.05 0 20 8.95 20 20h-3c0-9.39-7.61-17-17-17V3z"/></svg>
+          <span>RSS</span>
         </div>
 
         <div class="tile tile-live">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.75 5v5.4l4.2 2.5-.75 1.25-5-3V7h1.55z"/></svg>
-          <span>Time</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z"/></svg>
+          <span>Boards</span>
+        </div>
+
+        <div class="tile tile-optin">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.4 9.4 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.85-2.35 4.7-4.58 4.94.36.31.68.92.68 1.85v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+          <span>GitHub</span>
+          <small>opt-in</small>
+        </div>
+
+        <div class="tile tile-optin">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-2.2 2.6-5.6 2.9-8 1.3 1 2.7 3 4.6 5.7 5-1.1 1-2.9 1.7-5.2 1.7 2.8 2 6.5 2.1 8.8-.3 2.3 2.4 6 2.3 8.8.3-2.3 0-4.1-.7-5.2-1.7 2.7-.4 4.7-2.3 5.7-5-2.4 1.6-5.8 1.3-8-1.3-.4-.4-1.2-.4-1.6 0z"/></svg>
+          <span>Bluesky</span>
+          <small>opt-in</small>
+        </div>
+
+        <div class="tile tile-optin">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4.5 0 8 3 8 7.5 0 3.6-2.4 5.9-5.7 6.7l.7 3.3-3.4-2.1c-4.7-.3-7.6-3.2-7.6-6.9C4 6 7.5 3 12 3z"/></svg>
+          <span>Mastodon</span>
+          <small>opt-in</small>
+        </div>
+
+        <div class="tile tile-optin">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16v1.5H4V19zm1-3.6 4.5-4.9 3 3 5.7-6.3 1.3 1.2-7 7.7-3-3L6.1 16.6 5 15.4z"/></svg>
+          <span>Market&nbsp;News</span>
+          <small>opt-in</small>
         </div>
 
         <div class="tile tile-optin">
@@ -305,6 +296,12 @@
         <div class="tile tile-optin">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v2h3v3a4 4 0 0 1-3.3 3.94A5 5 0 0 1 13 15.9V18h3v2H8v-2h3v-2.1a5 5 0 0 1-3.7-3.96A4 4 0 0 1 4 8V5h3V3zm-1 4v1a2 2 0 0 0 1 1.73V7H6zm11 0v2.73A2 2 0 0 0 18 8V7h-1z"/></svg>
           <span>Sports</span>
+          <small>opt-in</small>
+        </div>
+
+        <div class="tile tile-optin">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-6l-4 3v-3H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm6 3.5v5l4.5-2.5L10 8.5z"/></svg>
+          <span>Twitch</span>
           <small>opt-in</small>
         </div>
 
@@ -497,28 +494,32 @@
     </div>
   </section>
 
-  <section class="coming-soon" id="preview">
+  <section class="coming-soon" id="get">
     <div class="wrap coming-soon-inner">
-      <h2>Private preview now. Public preview next.</h2>
+      <h2>Get DayFrame</h2>
       <p>
-        v0.6 is in the hands of a small group of testers on Windows 10 and 11, x64 and Arm64.
-        It is the last private preview: the release after it opens the doors to everyone, with
-        a Microsoft Store listing on the way so installs are signed and updates arrive on their own.
+        DayFrame 1.0 Preview is free in the Microsoft Store for Windows 10 (version 1809 or later)
+        and Windows 11, on x64 and Arm64 PCs. The Store installs it and keeps it up to date.
+      </p>
+      <p class="windows-only-note">
+        DayFrame is a Windows app. Open this page on your Windows PC to install it from the
+        Microsoft Store.
+      </p>
+      <p class="store-only">
+        <a class="store-badge" href="https://apps.microsoft.com/detail/9MW9FNK1H1N3" target="_blank" rel="noopener">
+          <img src="img/ms-store-badge.svg" alt="Download from the Microsoft Store" width="161" height="44" />
+        </a>
       </p>
       <p class="muted">
-        Want to try v0.6 before then, or hear when the public preview lands?
-        <a class="contact-link" href="mailto:info@getdayframe.app">Contact us</a> and tell us
-        which mail, calendar and contacts providers you use — we are especially keen to hear
-        from people on Posteo, Mailbox.org, Zoho or a self-hosted server.
+        This is a public preview. The people who build DayFrame use it every day, and it still has
+        rough edges. Google sign-in shows an "unverified app" notice while Google's review is in
+        progress, and is limited to the first 100 users. Gmail also works as an IMAP account with
+        an app password.
       </p>
       <div class="cta-row">
         <a class="cta" href="https://feedback.getdayframe.app" target="_blank" rel="noopener">Vote on what's next</a>
         <a class="cta-secondary" href="mailto:info@getdayframe.app">Contact us</a>
       </div>
-      <p class="muted">
-        Check back at <strong>getdayframe.app</strong> for updates as more of the day comes
-        together.
-      </p>
     </div>
   </section>
 

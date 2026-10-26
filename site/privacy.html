@@ -20,6 +20,7 @@
 <meta property="og:image" content="https://getdayframe.app/img/og-image.png" />
 
 <link rel="stylesheet" href="css/style.css" />
+<script src="js/platform.js"></script>
 </head>
 <body>
 
@@ -29,7 +30,7 @@
       <span class="brand-mark" aria-hidden="true"></span>
       <span class="brand-name">DayFrame</span>
     </a>
-    <span class="pill">Coming soon</span>
+    <a class="pill store-only" href="https://apps.microsoft.com/detail/9MW9FNK1H1N3" target="_blank" rel="noopener">Get it from the Microsoft Store</a>
   </div>
 </header>
 
@@ -38,7 +39,7 @@
     <a class="back-link" href="index.html">&larr; Back to DayFrame</a>
 
     <h1>Privacy Policy</h1>
-    <p class="updated"><strong>Last Updated:</strong> October 24, 2026</p>
+    <p class="updated"><strong>Last Updated:</strong> October 26, 2026</p>
 
     <section>
       <h2>Overview</h2>
@@ -203,7 +204,18 @@
           leagues you follow, once you turn the Sports module on. The request names the league,
           never the teams you follow.
         </li>
-        <li><strong>Any RSS or Atom feed you subscribe to</strong> &mdash; fetching that feed.</li>
+        <li>
+          <strong>Any RSS or Atom feed you subscribe to</strong>, including a subreddit you add in
+          RSS settings (<code>www.reddit.com</code>) &mdash; fetching that feed.
+        </li>
+        <li>
+          <strong>The Microsoft Store</strong>, only if you installed DayFrame from the Store
+          &mdash; DayFrame asks the Store, through Windows' own Store service, whether a newer
+          version is available, and the Store downloads and installs it. That exchange is
+          between Windows and Microsoft and is covered by the
+          <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft Privacy Statement</a>.
+          A zip install never checks for updates.
+        </li>
       </ul>
       <p>
         Each request goes straight from your computer to that service. If you do not connect an

@@ -127,6 +127,47 @@ a.pill:hover {
   background: rgba(22, 112, 201, 0.24);
 }
 
+/* Microsoft Store badge (Microsoft's own artwork, kept as a local copy in img/). The badge
+   carries its own background and border, so the link adds only spacing and a focus ring. */
+.store-badge {
+  display: inline-flex;
+  line-height: 0;
+  border-radius: 6px;
+}
+
+.store-badge img {
+  height: 48px;
+  width: auto;
+}
+
+.store-badge-sm img {
+  height: 34px;
+}
+
+.store-badge:focus-visible {
+  outline: 2px solid var(--tile-blue-light);
+  outline-offset: 3px;
+}
+
+.hero-actions {
+  align-items: center;
+}
+
+/* DayFrame only runs on Windows: js/platform.js marks every other visitor's page "not-windows",
+   which swaps the Store links for a note saying so. */
+.not-windows .store-badge,
+.not-windows .store-only {
+  display: none;
+}
+
+.windows-only-note {
+  display: none;
+}
+
+.not-windows .windows-only-note {
+  display: block;
+}
+
 /* Hero */
 
 .hero {
