@@ -153,6 +153,21 @@ a.pill:hover {
   align-items: center;
 }
 
+/* DayFrame only runs on Windows: js/platform.js marks every other visitor's page "not-windows",
+   which swaps the Store links for a note saying so. */
+.not-windows .store-badge,
+.not-windows .store-only {
+  display: none;
+}
+
+.windows-only-note {
+  display: none;
+}
+
+.not-windows .windows-only-note {
+  display: block;
+}
+
 /* Hero */
 
 .hero {
