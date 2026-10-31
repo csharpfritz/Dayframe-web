@@ -65,7 +65,7 @@
           <a class="store-badge" href="https://apps.microsoft.com/detail/9MW9FNK1H1N3" target="_blank" rel="noopener">
             <img src="img/ms-store-badge.svg" alt="Download from the Microsoft Store" width="161" height="44" />
           </a>
-          <a class="cta cta-outline" href="#whats-new">What's new in 1.0 Preview 2</a>
+          <a class="cta cta-outline" href="#whats-new">What's new in 1.0 Preview 3</a>
         </div>
       </div>
       <div class="hero-shot">
@@ -106,105 +106,110 @@
 
   <section class="whats-new" id="whats-new">
     <div class="wrap">
-      <p class="eyebrow">1.0 Preview 2 · October 2026</p>
-      <h2>What's new in 1.0 Preview 2</h2>
+      <p class="eyebrow">1.0 Preview 3 · October 2026</p>
+      <h2>What's new in 1.0 Preview 3</h2>
       <p class="whats-new-lede">
-        DayFrame 1.0 is a public preview, and anyone on Windows can install it from the Microsoft
-        Store. Preview 2 is the first build to arrive through the Store's own updates. It brings
-        a welcome tour, a Twitch module, boards you lay out freely, a much richer Weather, tiles
-        that sparkle, and a long list of speed and polish work.
+        Preview 3 arrives through the Store's own updates, so if you have Preview 2 it updates on
+        its own. It adds a Transit module that tells you when to leave for your bus or train, a
+        Bluesky laid out like bsky.app, more email providers, and a long list of Gmail, sign-in,
+        rail and RSS fixes.
       </p>
 
       <div class="feature-grid">
 
         <article class="feature">
-          <h3>In the Microsoft Store</h3>
+          <h3>New: Transit</h3>
           <p>
-            Install DayFrame from the Microsoft Store and the Store keeps it up to date. The
-            package is signed, so there's no SmartScreen warning to click through. It runs on
-            Windows 10 and 11, on both x64 and Arm64 PCs.
+            Pick your city and see scheduled departures for any stop, with live estimates, delays
+            and service alerts where your agency publishes them. Pin a stop to the rail and its
+            tile shows when the next one leaves. Add your walk time and departures become times to
+            leave, with a toast when it's time to go. A commute timeline lines up your pinned
+            stops, each line has a diagram and a route map, and every stop has a service-day chart.
           </p>
           <p>
-            Already running the zip build from a private preview? The first time the Store
-            version starts, it brings your settings and accounts across.
-          </p>
-        </article>
-
-        <article class="feature">
-          <h3>A welcome on first start</h3>
-          <p>
-            A new welcome tour introduces every module and lets you pick which ones to turn on.
-            It also covers appearance and getting around, and you can reopen it any time from the
-            Application menu. Fewer modules start switched on, and Email, Calendar and Contacts
-            say plainly how to connect an account rather than sitting empty.
-          </p>
-        </article>
-
-        <article class="feature">
-          <h3>Twitch, for streamers</h3>
-          <p>
-            Sign in with a short device code, and your channel's tile shows when you're live and
-            how many people are watching. The Twitch dashboard adds your stream title, category,
-            follower and subscriber totals and your schedule, plus which of the channels you
-            follow are live right now.
-          </p>
-        </article>
-
-        <article class="feature">
-          <h3>Boards on a free grid</h3>
-          <p>
-            Boards now lay widgets out on a grid you control: drag a widget anywhere and resize it
-            from any side. Repositories you watch on GitHub can go on a board as widgets too.
-            If one widget can't load, only that card says so, and the rest of the board carries on.
-          </p>
-        </article>
-
-        <article class="feature">
-          <h3>Weather in detail</h3>
-          <p>
-            The Weather module adds today's details, the next 24 hours and a seven-day chance of
-            rain, and you can switch between your locations. The tile's back face splits into the
-            days ahead, and the tile icon can show the condition and the temperature together.
-          </p>
-        </article>
-
-        <article class="feature">
-          <h3>Tiles that sparkle (and drip)</h3>
-          <p>
-            Five glitter textures (silver, gold, red, green and blue) twinkle on the rail, and the
-            new Green Slime material drips and wobbles. The light theme gets a light navigation
-            pane, toolbar and title bar to match, and the tile menu is grouped by what you're
-            trying to do.
+            Transit is a switch away in Settings. Schedules come from Transitland, with a free key
+            you bring yourself.
           </p>
           <button type="button" class="shot-trigger feature-shot" aria-label="View larger image">
             <picture>
-              <source srcset="img/screens/whats-new-tiles.webp" type="image/webp" />
-              <img src="img/screens/whats-new-tiles.png" alt="A DayFrame tile rail in a mix of sizes and materials - sunset gradient, leather, kraft paper, chalkboard, cork, denim, brushed metal and wood grain - beside the Weather module's Philadelphia forecast" loading="lazy" />
+              <source srcset="img/screens/transit-leave-by.webp" type="image/webp" />
+              <img src="img/screens/transit-leave-by.png" alt="DayFrame's Transit module for a sample city: a commute timeline across two pinned stops with a 'leave in 12 min' marker, a pinned Elm Street stop with a 5-minute walk time and 'Tell me when to leave' checked, a Central Station board with a live service warning and a canceled departure, and the lines and stops lists below" loading="lazy" />
             </picture>
           </button>
         </article>
 
         <article class="feature">
-          <h3>At home in Windows</h3>
+          <h3>Bluesky looks like bsky.app</h3>
+          <p>
+            Post cards are restyled after bsky.app, and a thread opens in a pane beside the
+            timeline, so you can read a whole conversation without losing your place.
+          </p>
+          <button type="button" class="shot-trigger feature-shot" aria-label="View larger image">
+            <picture>
+              <source srcset="img/screens/bluesky-thread.webp" type="image/webp" />
+              <img src="img/screens/bluesky-thread.png" alt="DayFrame's Bluesky module with sample posts: the home timeline on the left and a Thread pane on the right showing a post, its reply counts and the replies beneath it" loading="lazy" />
+            </picture>
+          </button>
+        </article>
+
+        <article class="feature">
+          <h3>More email providers</h3>
+          <p>
+            IMAP presets for IONOS, StartMail and STRATO join the list, and GMX and WEB.DE app
+            passwords now work for Calendar and Contacts as well as Email.
+          </p>
+        </article>
+
+        <article class="feature">
+          <h3>Gmail and Google</h3>
           <ul>
-            <li>Opening DayFrame again brings up the window you already have, and the taskbar
-              jump list opens Email, Calendar, Contacts or Notes directly.</li>
-            <li>Your tiles' counts add up to a badge on the taskbar icon.</li>
-            <li>DayFrame can start when you sign in to Windows. It's off unless you turn it on.</li>
-            <li>The title bar stays readable in the dark theme.</li>
+            <li>Folders and searches page through all of their results, so Load more keeps going
+              past 500 messages.</li>
+            <li>All Mail's unread count comes from Gmail's own label counters.</li>
+            <li>DayFrame asks for fewer Google permissions, and connecting a different Google
+              account revokes the previous account's grant.</li>
           </ul>
         </article>
 
         <article class="feature">
-          <h3>Faster, lighter, and better behaved</h3>
+          <h3>Sign-in that sticks</h3>
+          <p>
+            Signing in through your browser is more reliable. DayFrame validates the response
+            before it shows the success page, ignores stray requests, and retries if its port is
+            taken. Mastodon registers once per server and uses the port sign-in actually listens
+            on.
+          </p>
+        </article>
+
+        <article class="feature">
+          <h3>Rail and tiles</h3>
           <ul>
-            <li>Google Calendar and Contacts and CalDAV/CardDAV servers sync only what changed,
-              and cached mail, events and posts stay available offline.</li>
-            <li>Notes keeps its index between runs, and long contact lists scroll smoothly
-              with an A-Z jump.</li>
-            <li>GitHub pull requests show their check status. In Email you can hide preview text
-              and archive from the keyboard. RSS can follow a subreddit.</li>
-            <li>The Help page answers questions you type about DayFrame.</li>
+            <li>You can grab the tile rail's scrollbar again without dragging the splitter next to
+              it. Thanks for the report on the feedback board.</li>
+            <li>Tiles keep flipping while DayFrame isn't focused. You can turn this off.</li>
+            <li>Every tile's right-click menu has a "<em>Module</em> settings" entry.</li>
+            <li>Badges stay on one line at the narrowest rail width, and dragging the splitter no
+              longer stretches tiles.</li>
+          </ul>
+        </article>
+
+        <article class="feature">
+          <h3>RSS</h3>
+          <p>
+            Reddit feeds show the subreddit's own image, stop showing a false "Failed to load
+            feed", and space their requests by Reddit's rate limits. Feeds that publish a
+            formatted body now show it.
+          </p>
+        </article>
+
+        <article class="feature">
+          <h3>Smaller fixes</h3>
+          <ul>
+            <li>Notes' Rich mode fills the pane, and a rename that only changes case reaches the
+              index.</li>
+            <li>Dark-theme form placeholders are readable.</li>
+            <li>A change you make in Weather or Market News settings shows on the open page.</li>
+            <li>The About page no longer shows a stray HTML comment in its release notes.</li>
           </ul>
         </article>
 
@@ -216,7 +221,7 @@
     <div class="wrap">
       <h2>Built to grow, module by module</h2>
       <p class="modules-lede">
-        Seven everyday modules start on, seven more are a switch away in Settings, and Boards
+        Seven everyday modules start on, eight more are a switch away in Settings, and Boards
         pulls them all together. More arrive over time.
       </p>
 
@@ -305,6 +310,12 @@
           <small>opt-in</small>
         </div>
 
+        <div class="tile tile-optin">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6zm3 2v5h2V8H7zm4 0v5h2V8h-2zm4 0v5h2V8h-2zM8 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+          <span>Transit</span>
+          <small>opt-in</small>
+        </div>
+
       </div>
 
       <h3 class="modules-group-h modules-group-h-planned">Planned</h3>
@@ -323,11 +334,6 @@
         <div class="tile tile-muted">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11l4 4v6a1 1 0 0 1-1 1h-1.2a2.5 2.5 0 0 1-4.6 0H9.8a2.5 2.5 0 0 1-4.6 0H4a1 1 0 0 1-1-1V7zm11 1.5V11h2.5L14 8.5zM7.5 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm9 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
           <span>Parcel&nbsp;Tracking</span>
-        </div>
-
-        <div class="tile tile-muted">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6zm3 2v5h2V8H7zm4 0v5h2V8h-2zm4 0v5h2V8h-2zM8 19a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
-          <span>Transit&nbsp;Schedules</span>
         </div>
 
         <div class="tile tile-muted">
@@ -369,8 +375,8 @@
             <h3>Email, Calendar &amp; Contacts</h3>
             <p>
               These three share one connection per account — a Google sign-in, or IMAP, CalDAV
-              and CardDAV for providers such as Yahoo, Posteo, Mailbox.org and Zoho, or your own
-              server.
+              and CardDAV for providers such as Yahoo, Posteo, Mailbox.org, Zoho, GMX, WEB.DE,
+              IONOS, StartMail and STRATO, or your own server.
             </p>
           </div>
         </div>
@@ -422,6 +428,16 @@
 
         <div class="blurb blurb-text-only">
           <div class="blurb-text">
+            <h3>Transit</h3>
+            <p>
+              Departures for the stops you ride from, live where your agency publishes it. Pin a
+              stop to the rail, add your walk time, and its tile tells you when to leave.
+            </p>
+          </div>
+        </div>
+
+        <div class="blurb blurb-text-only">
+          <div class="blurb-text">
             <h3>Weather, Market News &amp; Bluesky</h3>
             <p>
               Each has its own module view for a closer look, plus a matching board widget for
@@ -443,8 +459,10 @@
           arrange the pieces of your day exactly how you want to see them.
         </p>
         <p class="boards-widgets">
-          Widgets available today: Calendar day view, Calendar agenda, Weather conditions,
-          Bluesky recent posts, Market News watchlist, RSS, and Email folder.
+          Widgets available today: recent Email, Calendar agenda and day view, a Contacts
+          person, recent Notes, GitHub repository and saved-view activity, Asana tasks and
+          projects, Weather conditions, a Clock, recent RSS items, Bluesky and Mastodon posts,
+          Market News quotes and watchlists, and Sports scores and teams.
         </p>
         <ul class="feature-list">
           <li>A distinct edit mode for laying widgets out</li>
