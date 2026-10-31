@@ -30,7 +30,8 @@ hand-written HTML/CSS.
 - The site's visual identity intentionally mirrors the app's own tile-rail
   UI (bold blue gradient squares, dark navy background) — keep new sections
   and assets consistent with the palette in `style.css`.
-- DayFrame 1.0 is a **public preview in the Microsoft Store**
+- DayFrame 1.0 is a **public preview in the Microsoft Store**; the current build is
+  1.0 Preview 3 (tag `v1.0.0-preview.3`, 2026-10-29, Store package 1.0.3.0)
   (https://apps.microsoft.com/detail/9MW9FNK1H1N3, Store ID `9MW9FNK1H1N3`). The site's
   download is the official "Download from the Microsoft Store" badge, kept as a local copy in
   `site/img/ms-store-badge.svg` so visitors never fetch Microsoft artwork just to see the page.
