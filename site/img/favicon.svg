@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2f8ae0" />
-      <stop offset="100%" stop-color="#0e5aa8" />
-    </linearGradient>
-  </defs>
-  <rect x="0" y="0" width="32" height="32" rx="8.7" fill="url(#g)" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="DayFrame">
+  <rect width="100" height="100" rx="22" fill="#10213A"/>
+  <rect x="13.6" y="13.6" width="21.6" height="21.6" rx="5" fill="#314A6B"/>
+  <rect x="39.7" y="13.6" width="21.6" height="21.6" rx="5" fill="#314A6B"/>
+  <rect x="65.8" y="13.6" width="21.6" height="21.6" rx="5" fill="#314A6B"/>
+  <rect x="13.6" y="39.7" width="21.6" height="21.6" rx="5" fill="#314A6B"/>
+  <rect x="39.7" y="39.7" width="21.6" height="21.6" rx="5" fill="#3AADF7"/>
+  <rect x="65.8" y="39.7" width="21.6" height="21.6" rx="5" fill="#314A6B"/>
+  <rect x="13.6" y="65.8" width="21.6" height="21.6" rx="5" fill="#314A6B"/>
+  <rect x="39.7" y="65.8" width="21.6" height="21.6" rx="5" fill="#314A6B"/>
+  <rect x="65.8" y="65.8" width="21.6" height="21.6" rx="5" fill="#314A6B"/>
 </svg>

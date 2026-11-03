@@ -20,9 +20,16 @@ hand-written HTML/CSS.
 
 - `site/index.html` — the single page of the site (hero, purpose, what's-new
   release section, module tile grid, preview-status section).
+- `site/branding.html` — brand assets page: wordmarks, logo mark, colors and usage rules.
+- `site/privacy.html`, `site/terms.html` — legal pages.
 - `site/css/style.css` — all styling; brand colors and tile-rail theme are
   defined as CSS custom properties at the top of the file.
 - `site/img/` — image assets (app screenshot, social share image, favicons).
+- `site/img/brand/` — downloadable brand kit. The mark is a clean redraw (`dayframe-mark.svg`,
+  plus PNG renders) of the app's tile-grid icon; the wordmarks are transparent light- and
+  dark-background versions of the app repo's `docs/img/logo-wordmark.png`.
+- `site/sitemap.xml` and `site/robots.txt` — SEO. Add every new page to the sitemap, and bump a
+  page's `<lastmod>` when its content changes. Every page carries a `<link rel="canonical">`.
 - `site/CNAME` — GitHub Pages custom domain configuration.
 
 ## Notes for future changes

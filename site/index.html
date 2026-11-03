@@ -27,6 +27,7 @@
 <meta name="twitter:description" content="A desktop app for Windows that brings your email, calendar, contacts, notes, boards, and more together behind one familiar shell with a live-tile navigation rail. Free in the Microsoft Store (1.0 Preview)." />
 <meta name="twitter:image" content="https://getdayframe.app/img/og-image.png" />
 
+<link rel="canonical" href="https://getdayframe.app/" />
 <link rel="stylesheet" href="css/style.css" />
 <script src="js/platform.js"></script>
 <script src="js/lightbox.js" defer></script>
@@ -35,10 +36,9 @@
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <div class="brand">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-name">DayFrame</span>
-    </div>
+    <a class="brand" href="index.html">
+      <img class="brand-wordmark" src="img/brand/dayframe-wordmark-dark-700.png" alt="DayFrame" width="700" height="141" />
+    </a>
     <nav class="header-links" aria-label="Site">
       <a class="header-link" href="#whats-new">What's new</a>
       <a class="roadmap-link" href="https://feedback.getdayframe.app" target="_blank" rel="noopener">Roadmap</a>
@@ -59,7 +59,6 @@
           DayFrame is a desktop-first app for Windows that brings your email, calendar, contacts,
           and more together in one place — with a friendly layout and a
           Windows&nbsp;Phone-inspired live tile navigation rail for switching between modules.
-          Mac support is planned.
         </p>
         <div class="hero-actions">
           <a class="store-badge" href="https://apps.microsoft.com/detail/9MW9FNK1H1N3" target="_blank" rel="noopener">
@@ -67,6 +66,10 @@
           </a>
           <a class="cta cta-outline" href="#whats-new">What's new in 1.0 Preview 3</a>
         </div>
+        <p class="mac-soon">
+          <span class="pill">Coming soon</span>
+          DayFrame for Mac is on the way.
+        </p>
       </div>
       <div class="hero-shot">
         <button type="button" class="shot-frame shot-trigger" aria-label="View larger image">
@@ -520,8 +523,12 @@
         and Windows 11, on x64 and Arm64 PCs. The Store installs it and keeps it up to date.
       </p>
       <p class="windows-only-note">
-        DayFrame is a Windows app. Open this page on your Windows PC to install it from the
-        Microsoft Store.
+        DayFrame is a Windows app for now. Open this page on your Windows PC to install it from
+        the Microsoft Store.
+      </p>
+      <p>
+        <strong>Coming soon for Mac.</strong> A Mac version of DayFrame is in the works. Follow
+        its progress on the <a class="contact-link" href="https://feedback.getdayframe.app" target="_blank" rel="noopener">roadmap</a>.
       </p>
       <p class="store-only">
         <a class="store-badge" href="https://apps.microsoft.com/detail/9MW9FNK1H1N3" target="_blank" rel="noopener">
@@ -559,6 +566,8 @@
       <a href="privacy.html">Privacy</a>
       <span class="dot" aria-hidden="true">·</span>
       <a href="terms.html">Terms</a>
+      <span class="dot" aria-hidden="true">·</span>
+      <a href="branding.html">Brand</a>
     </span>
   </div>
 </footer>

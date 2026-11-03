@@ -59,27 +59,24 @@ h1, h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   height: 64px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.brand-mark {
-  width: 22px;
-  height: 22px;
   border-radius: 6px;
-  background: linear-gradient(135deg, var(--tile-blue-light), var(--tile-blue-dark));
-  flex: none;
 }
 
-.brand-name {
-  font-weight: 600;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+.brand:focus-visible {
+  outline: 2px solid var(--tile-blue-light);
+  outline-offset: 4px;
+}
+
+.brand-wordmark {
+  height: 30px;
+  width: auto;
 }
 
 .header-link {
@@ -752,6 +749,149 @@ a.pill:hover {
   padding: 1px 5px;
 }
 
+/* Brand assets page */
+
+.brand-page section > p {
+  margin-bottom: 20px;
+}
+
+.brand-grid {
+  display: grid;
+  gap: 20px;
+  margin: 0 0 20px;
+}
+
+.brand-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.brand-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.brand-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.brand-card {
+  margin: 0;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.brand-swatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 28px;
+  min-height: 160px;
+}
+
+.brand-swatch img {
+  width: 100%;
+  height: auto;
+}
+
+.brand-swatch-mark img {
+  width: 96px;
+}
+
+.brand-swatch-light {
+  background: #ffffff;
+}
+
+.brand-swatch-dark {
+  background: var(--bg);
+}
+
+.brand-swatch-blue {
+  background: var(--tile-blue);
+}
+
+.brand-card figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+
+.brand-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+
+.brand-page .brand-downloads a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.brand-page .brand-downloads a:hover {
+  text-decoration: underline;
+}
+
+.brand-downloads-row {
+  font-size: 0.92rem;
+}
+
+.brand-color {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 12px 14px;
+  font-size: 0.92rem;
+}
+
+.brand-color-chip {
+  display: block;
+  height: 64px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.brand-color code {
+  align-self: flex-start;
+}
+
+@media (max-width: 860px) {
+  .brand-grid-2,
+  .brand-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* "Coming soon" note for the Mac version, under the hero actions */
+
+.mac-soon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.mac-soon .pill {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 32px;
@@ -805,6 +945,10 @@ a.pill:hover {
 @media (max-width: 420px) {
   .header-inner {
     height: 56px;
+  }
+
+  .brand-wordmark {
+    height: 24px;
   }
 
   .header-links {
