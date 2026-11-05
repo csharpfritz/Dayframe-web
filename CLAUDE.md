@@ -31,6 +31,16 @@ hand-written HTML/CSS.
 - `site/sitemap.xml` and `site/robots.txt` — SEO. Add every new page to the sitemap, and bump a
   page's `<lastmod>` when its content changes. Every page carries a `<link rel="canonical">`.
 - `site/CNAME` — GitHub Pages custom domain configuration.
+- `site/help-library/` — **the one exception to the sitemap rule.** The DayFrame user guide,
+  rendered to HTML from the app repo's `user-docs/` by its `.github/workflows/publish-guide.yml`, which
+  replaces the whole folder and commits "Help library: user-docs @ <sha>" to `main`. Lens (the app's
+  Help search) crawls it from `help-library/` and reads `help-library/version.txt` to see which commit
+  is live. Rules for this folder:
+  - **Never edit it by hand**; the next publish overwrites it. Fix the guide in the app repo instead.
+  - **No sitemap entry**, and nothing on the site links to it: it is unlisted.
+  - Every page carries `<meta name="robots" content="noindex">` and no `<link rel="canonical">`.
+  - **Do not `Disallow` it in `robots.txt`**: that could stop Lens's crawler too.
+  - Unlisted is obscurity, not privacy. The guide is written for users and is public-safe.
 
 ## Notes for future changes
 
