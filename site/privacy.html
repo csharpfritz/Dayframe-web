@@ -39,7 +39,7 @@
     <a class="back-link" href="index.html">&larr; Back to DayFrame</a>
 
     <h1>Privacy Policy</h1>
-    <p class="updated"><strong>Last Updated:</strong> November 3, 2026</p>
+    <p class="updated"><strong>Last Updated:</strong> November 9, 2026</p>
 
     <section>
       <h2>Overview</h2>
@@ -99,7 +99,8 @@
           <strong>That key, and your access tokens for every connected account, are held in Windows'
           own secure storage</strong>, not in a file DayFrame writes. So are a mail password or app
           password for a Yahoo, AOL or other IMAP account (stored only after the mail server has
-          accepted it) and an Asana token you paste in.
+          accepted it), an Asana token you paste in, and the TripIt calendar feed address you paste
+          in.
         </li>
         <li>
           <strong>Your notes are your own files.</strong> The Notes module reads and writes a vault
@@ -124,8 +125,9 @@
         <li><strong>Email</strong> sends the messages you write, and moves, archives, deletes and marks messages read or unread when you do.</li>
         <li><strong>Calendar</strong> creates, edits and deletes the events you create, edit and delete.</li>
         <li><strong>Contacts</strong> creates, edits and deletes the contacts you create, edit and delete.</li>
-        <li><strong>Mastodon</strong> favorites and bookmarks a post, and undoes either, when you click to.</li>
-        <li><strong>Asana</strong> completes and reopens tasks, changes due dates, adds comments and adds tasks.</li>
+        <li><strong>Mastodon</strong> favorites and bookmarks a post, and undoes either, when you click to, and publishes the posts you write in its compose column.</li>
+        <li><strong>Bluesky</strong> publishes the posts you write in its compose column, and tells Bluesky your notifications have been seen when you mark them all as read.</li>
+        <li><strong>Asana</strong> completes and reopens tasks, changes due dates, adds comments and adds tasks, and, if you click Undo right after adding a comment or task, deletes it again.</li>
       </ul>
       <p>Every other module only reads. DayFrame talks to:</p>
       <ul>
@@ -156,12 +158,26 @@
           your address before the @, and nothing is sent to a third-party settings database.
         </li>
         <li>
+          <strong>Microsoft</strong> (<code>login.microsoftonline.com</code>,
+          <code>graph.microsoft.com</code>) &mdash; signing in to a personal Microsoft account or a
+          work or school Microsoft 365 account, and keeping that sign-in current. DayFrame asks for
+          your name, email address and organization (tenant), and for permission to read and send
+          your mail and to read and change your calendar and contacts. Email reads your Outlook mail
+          folders and messages, marks them read, moves, archives and deletes them, and sends mail
+          from that account through Microsoft Graph. Contacts reads and changes your contacts, and
+          reads their photos, through Microsoft Graph when you choose that account in Contacts
+          settings. Calendar reads and changes your calendars and events through Microsoft Graph
+          once you choose that account in Calendar settings.
+        </li>
+        <li>
           <strong>GitHub</strong> (<code>github.com</code>, <code>api.github.com</code>) &mdash;
           sign-in, and your issues, pull requests and notifications.
         </li>
         <li>
           <strong>Bluesky</strong> (<code>bsky.social</code>, <code>bsky.app</code>,
-          <code>cdn.bsky.app</code>) &mdash; sign-in, and your timeline.
+          <code>cdn.bsky.app</code>) &mdash; sign-in, your timeline and notifications, publishing
+          the posts you write in the compose column, and telling Bluesky your notifications have
+          been seen when you mark them all as read.
         </li>
         <li>
           <strong>Twitch</strong> (<code>id.twitch.tv</code>, <code>api.twitch.tv</code>) &mdash;
@@ -175,10 +191,12 @@
         <li>
           <strong>The Mastodon server you sign in to</strong> &mdash; registering DayFrame as an app
           on that server, sign-in, reading your home timeline, notifications, favorites and
-          bookmarks, and favoriting or bookmarking a post when you click to. DayFrame asks to read
-          your account (<code>read</code>) and to change your favorites and bookmarks
-          (<code>write:favourites</code>, <code>write:bookmarks</code>), and nothing else: it can't
-          post, boost, follow or delete anything. Avatars, attachments, link previews and custom
+          bookmarks, favoriting or bookmarking a post when you click to, and publishing the posts
+          you write in the compose column. DayFrame asks to read your account
+          (<code>read</code>), to change your favorites and bookmarks
+          (<code>write:favourites</code>, <code>write:bookmarks</code>) and to publish posts
+          (<code>write:statuses</code>), and nothing else. It doesn't boost, follow or delete
+          anything. Avatars, attachments, link previews and custom
           emoji are loaded from the addresses your server gives &mdash; normally its own media host.
         </li>
         <li>
@@ -187,7 +205,9 @@
         </li>
         <li>
           <strong>Open-Meteo</strong> (<code>api.open-meteo.com</code>,
-          <code>geocoding-api.open-meteo.com</code>) &mdash; weather for a place you name.
+          <code>geocoding-api.open-meteo.com</code>) &mdash; weather for a place you name, and, when
+          the Trips module is on, for the destinations of your trips in the coming week (their
+          coordinates only).
         </li>
         <li>
           <strong>Finnhub</strong> (<code>finnhub.io</code>) and <strong>Yahoo Finance</strong>
@@ -208,9 +228,25 @@
           goes in a request header.
         </li>
         <li>
+          <strong>TripIt</strong> (<code>www.tripit.com</code>) &mdash; reading your private TripIt
+          calendar feed, once you turn the Trips module on and paste its address in Trips settings.
+          The request is the feed address itself, which carries TripIt's private token for your
+          account; DayFrame sends nothing else. DayFrame keeps that address in your system's secure
+          storage, and resetting the feed in TripIt revokes it.
+        </li>
+        <li>
           <strong>ESPN</strong> (<code>site.api.espn.com</code>) &mdash; scores and headlines for the
           leagues you follow, once you turn the Sports module on. The request names the league,
           never the teams you follow.
+        </li>
+        <li>
+          <strong>The Space Devs</strong> (<code>ll.thespacedevs.com</code>) and the
+          <strong>Spaceflight News API</strong> (<code>api.spaceflightnewsapi.net</code>) &mdash;
+          upcoming launches and space news, once you turn the Space Launch module on: two requests
+          every 30 minutes that carry nothing about you. Launch pictures load from the media host
+          the launch names (The Space Devs') and article pictures from each news site, which can
+          see that you viewed them, only under the &ldquo;Pictures from Space Launch&rdquo; choice
+          you make: ask for each picture (the default), always, or never.
         </li>
         <li>
           <strong>Any RSS or Atom feed you subscribe to</strong>, including a subreddit you add in
@@ -377,6 +413,12 @@
           by hand.
         </li>
         <li>
+          <strong>Microsoft</strong> &mdash; in <strong>Settings &rarr; Shared Providers</strong>,
+          Disconnect under Microsoft 365 deletes the stored credentials and the connection.
+          Microsoft offers no way for an app like DayFrame to revoke its own access, so the page
+          then links to the two places you remove it yourself (below).
+        </li>
+        <li>
           <strong>GitHub</strong> &mdash; Disconnect on the GitHub settings page deletes the stored
           token, every cached issue, pull request and comment, and the tile's content; connecting a
           different GitHub account does the same. It does not revoke the token at GitHub, which
@@ -416,6 +458,13 @@
       </p>
       <ul>
         <li>Google &mdash; <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a></li>
+        <li>
+          Microsoft &mdash;
+          <a href="https://account.live.com/consent/Manage" target="_blank" rel="noopener noreferrer">account.live.com/consent/Manage</a>
+          for a personal account,
+          <a href="https://myapps.microsoft.com" target="_blank" rel="noopener noreferrer">myapps.microsoft.com</a>
+          for a work or school account
+        </li>
         <li>GitHub &mdash; <a href="https://github.com/settings/applications" target="_blank" rel="noopener noreferrer">github.com/settings/applications</a></li>
         <li>Bluesky &mdash; revoke the app password in your Bluesky settings</li>
         <li>Twitch &mdash; <a href="https://www.twitch.tv/settings/connections" target="_blank" rel="noopener noreferrer">twitch.tv/settings/connections</a>, under Other Connections</li>
